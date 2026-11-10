@@ -2,11 +2,11 @@
 
 Jogo de tabuleiro no navegador, inspirado em Ticket to Ride, com o mapa do Brasil. De 2 a 5 jogadores no mesmo computador, e cada vaga pode ser uma pessoa ou o computador.
 
-O projeto ainda está em desenvolvimento.
+O jogo já funciona do começo ao fim e segue recebendo ajustes.
 
 ## Como funciona
 
-Cada jogador começa com 45 caminhões e liga cidades construindo rotas pelo mapa. Na sua vez, ele faz uma destas ações:
+Cada jogador começa com 45 caminhões (20 na partida rápida, escolhida na tela inicial) e liga cidades construindo rotas pelo mapa. Antes da primeira jogada, cada um recebe 3 missões e fica com pelo menos 2. Na sua vez, o jogador faz uma destas ações:
 
 - comprar cartas;
 - reivindicar uma rota, pagando com cartas da cor dela;
@@ -14,12 +14,15 @@ Cada jogador começa com 45 caminhões e liga cidades construindo rotas pelo map
 
 As cartas são de 8 regiões (Amazônia, Cerrado, Pantanal, Caatinga, Mata Atlântica, Pampa, Litoral e Serra), mais o Estepe, que vale como coringa.
 
+O botão "Como jogar" abre um tutorial passo a passo, na tela inicial e durante a partida.
+
 ## O que muda em relação ao jogo original
 
 - **Missões:** ligar as cidades indicadas rende pontos, e quem não consegue perde pontos no fim.
-- **Dia e noite:** a cada amanhecer sai uma carta de evento que muda as regras para todos até o próximo amanhecer. A mesa também muda de cor: lilás de dia e roxo escuro à noite.
+- **Dia e noite:** a cada amanhecer sai uma carta de evento que muda as regras para todos até o próximo amanhecer. A mesa também muda de cor: lilás de dia e roxo escuro à noite. Na barra do topo, um caminhão passa pela estrada, com sol de dia e lua com faróis acesos à noite.
 - **Curiosidades:** ao ligar uma cidade, o jogador descobre uma curiosidade sobre ela e ganha 1 ponto.
-- **Fim de jogo:** quando alguém termina a vez com 2 caminhões ou menos, todos jogam mais uma rodada. O caminho mais longo vale 10 pontos extras.
+- **Fim de jogo:** quando alguém termina a vez com 2 caminhões ou menos, todos jogam mais uma rodada, e o topo da tela avisa. O caminho mais longo vale 10 pontos extras. No final, uma tela mostra a classificação com o detalhe dos pontos de cada jogador.
+- **Computador:** a jogada de cada computador aparece numa janela, para dar tempo de entender o que ele fez.
 
 ## Tecnologias
 
@@ -53,5 +56,4 @@ npm test
 
 ## Próximos passos
 
-- Tela de fim de jogo, com a classificação final e o vencedor
-- Sol e lua em movimento na barra do dia
+- Ajustes a partir dos testes com outras pessoas
