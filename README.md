@@ -17,7 +17,7 @@ As cartas são de 8 regiões (Amazônia, Cerrado, Pantanal, Caatinga, Mata Atlâ
 ## O que muda em relação ao jogo original
 
 - **Missões:** ligar as cidades indicadas rende pontos, e quem não consegue perde pontos no fim.
-- **Dia e noite:** a cada amanhecer sai uma carta de evento que muda as regras para todos até o próximo amanhecer.
+- **Dia e noite:** a cada amanhecer sai uma carta de evento que muda as regras para todos até o próximo amanhecer. A mesa também muda de cor: lilás de dia e roxo escuro à noite.
 - **Curiosidades:** ao ligar uma cidade, o jogador descobre uma curiosidade sobre ela e ganha 1 ponto.
 - **Fim de jogo:** quando alguém termina a vez com 2 caminhões ou menos, todos jogam mais uma rodada. O caminho mais longo vale 10 pontos extras.
 
@@ -53,4 +53,5 @@ npm test
 
 ## Próximos passos
 
-- Ajustar cores e layout
+- Tela de fim de jogo, com a classificação final e o vencedor
+- Sol e lua em movimento na barra do dia
