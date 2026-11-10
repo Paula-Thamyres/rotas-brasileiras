@@ -3,6 +3,13 @@ import {
   MAXIMO_DE_JOGADORES,
   MINIMO_DE_JOGADORES,
 } from '../../engine/constantes'
+import {
+  caminhoesDaDuracao,
+  DURACAO_PADRAO,
+  DURACOES_DA_PARTIDA,
+  NOME_DA_DURACAO,
+  type DuracaoDaPartida,
+} from '../../ui/duracao'
 import { corDoJogador } from '../../ui/jogadores'
 import { BotaoComoJogar } from '../tutorial/ComoJogar'
 import { TAMANHO_MAXIMO_DO_NOME } from '../../ui/nomes'
@@ -13,7 +20,10 @@ import {
 } from '../../ui/participantes'
 
 interface TelaInicialProps {
-  readonly onIniciar: (participantes: readonly ParticipanteDaPartida[]) => void
+  readonly onIniciar: (
+    participantes: readonly ParticipanteDaPartida[],
+    duracao: DuracaoDaPartida,
+  ) => void
 }
 
 const PARTICIPANTES_INICIAIS: readonly ParticipanteDaPartida[] = [
@@ -32,6 +42,7 @@ function proximoNomeLivre(participantes: readonly ParticipanteDaPartida[]) {
 
 export function TelaInicial({ onIniciar }: TelaInicialProps) {
   const [participantes, setParticipantes] = useState(PARTICIPANTES_INICIAIS)
+  const [duracao, setDuracao] = useState<DuracaoDaPartida>(DURACAO_PADRAO)
   const [erro, setErro] = useState<string | null>(null)
 
   function alterar(indice: number, mudanca: Partial<ParticipanteDaPartida>) {
@@ -81,6 +92,7 @@ export function TelaInicial({ onIniciar }: TelaInicialProps) {
         nome: nome.trim(),
         computador,
       })),
+      duracao,
     )
   }
 
@@ -147,6 +159,28 @@ export function TelaInicial({ onIniciar }: TelaInicialProps) {
             Adicionar jogador
           </button>
         )}
+        <fieldset>
+          <legend className="mb-2 text-sm font-semibold">
+            Duração da partida
+          </legend>
+          <div className="flex flex-wrap gap-2">
+            {DURACOES_DA_PARTIDA.map((opcao) => (
+              <label
+                key={opcao}
+                className="cursor-pointer rounded-lg border border-borda bg-interno px-3 py-1.5 text-sm has-checked:border-destaque has-checked:bg-borda"
+              >
+                <input
+                  type="radio"
+                  name="duracao-da-partida"
+                  checked={duracao === opcao}
+                  onChange={() => setDuracao(opcao)}
+                  className="sr-only"
+                />
+                {NOME_DA_DURACAO[opcao]} · {caminhoesDaDuracao(opcao)} caminhões
+              </label>
+            ))}
+          </div>
+        </fieldset>
         {erro !== null && (
           <p
             role="alert"

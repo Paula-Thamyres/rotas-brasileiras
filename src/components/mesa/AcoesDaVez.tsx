@@ -1,14 +1,9 @@
 interface AcoesDaVezProps {
   readonly aviso: string | null
-  readonly jogadaDoComputador: string | null
   readonly onComprarMissoes: () => void
 }
 
-export function AcoesDaVez({
-  aviso,
-  jogadaDoComputador,
-  onComprarMissoes,
-}: AcoesDaVezProps) {
+export function AcoesDaVez({ aviso, onComprarMissoes }: AcoesDaVezProps) {
   return (
     <section aria-label="Ações da vez" className="space-y-2">
       {aviso !== null && (
@@ -17,11 +12,6 @@ export function AcoesDaVez({
           className="rounded-lg bg-red-950 p-2 text-sm text-red-200"
         >
           {aviso}
-        </p>
-      )}
-      {jogadaDoComputador !== null && (
-        <p className="rounded-lg bg-interno p-2 text-sm">
-          {jogadaDoComputador}
         </p>
       )}
       <p className="text-sm text-suave">

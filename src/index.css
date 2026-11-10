@@ -40,3 +40,48 @@
   --color-mapa-terra: #f1efe8;
   --color-mapa-estrada: #5f5e5a;
 }
+@keyframes caminhao-passa {
+  from {
+    transform: translateX(-40px);
+  }
+  to {
+    transform: translateX(170px);
+  }
+}
+
+@keyframes faixa-corre {
+  to {
+    stroke-dashoffset: -16;
+  }
+}
+
+@keyframes raios-giram {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cena-caminhao {
+  animation: caminhao-passa 7s linear infinite;
+}
+
+.cena-faixa {
+  animation: faixa-corre 0.6s linear infinite;
+}
+
+.cena-raios {
+  transform-origin: 30px 16px;
+  animation: raios-giram 14s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cena-caminhao,
+  .cena-faixa,
+  .cena-raios {
+    animation: none;
+  }
+
+  .cena-caminhao {
+    transform: translateX(60px);
+  }
+}

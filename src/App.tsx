@@ -9,10 +9,12 @@ function App() {
     aviso,
     descoberta,
     idsDosComputadores,
-    jogadaDoComputador,
+    jogadasDosComputadores,
+    avisoDaJogadaAberto,
     iniciar,
     executar,
     dispensarDescoberta,
+    dispensarAvisoDaJogada,
     reiniciar,
   } = usePartida()
 
@@ -28,9 +30,11 @@ function App() {
           aviso={aviso}
           descoberta={descoberta}
           idsDosComputadores={idsDosComputadores}
-          jogadaDoComputador={jogadaDoComputador}
+          jogadasDosComputadores={jogadasDosComputadores}
+          avisoDaJogadaAberto={avisoDaJogadaAberto}
           onExecutar={executar}
           onDispensarDescoberta={dispensarDescoberta}
+          onDispensarAvisoDaJogada={dispensarAvisoDaJogada}
           onVoltarAoInicio={reiniciar}
         />
       )}
