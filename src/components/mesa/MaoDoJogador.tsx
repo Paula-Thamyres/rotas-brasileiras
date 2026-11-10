@@ -17,7 +17,7 @@ export function MaoDoJogador({ mao }: MaoDoJogadorProps) {
       {grupos.length === 0 ? (
         <p className="text-sm text-suave">Você não tem cartas.</p>
       ) : (
-        <div className="grid grid-cols-4 gap-x-2 gap-y-3">
+        <div className="flex flex-wrap gap-x-2 gap-y-3">
           {grupos.map(({ carta, quantidade }) => (
             <CartaNaMesa key={carta} carta={carta} quantidade={quantidade} />
           ))}

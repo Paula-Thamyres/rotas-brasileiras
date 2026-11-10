@@ -47,6 +47,9 @@ interface MesaProps {
 const CLASSES_DO_PAINEL =
   'rounded-xl border border-borda bg-painel p-3 space-y-4'
 
+const CLASSES_DA_FAIXA_DE_CARTAS =
+  'flex flex-wrap items-start gap-x-8 gap-y-4 rounded-xl border border-borda bg-painel p-3'
+
 export function Mesa({
   partida,
   aviso,
@@ -90,14 +93,13 @@ export function Mesa({
         )}
         corDoJogador={corDoJogador(partida.indiceDaVez)}
       />
-      <div className="grid flex-1 gap-3 min-[900px]:grid-cols-[200px_1fr_250px]">
+      <div className="grid gap-3 min-[900px]:grid-cols-[200px_1fr_200px]">
         <aside className={CLASSES_DO_PAINEL}>
           <PainelDosJogadores
             jogadores={partida.jogadores}
             indiceDaVez={partida.indiceDaVez}
             idsDosComputadores={idsDosComputadores}
           />
-          <MissoesDoJogador missoes={dono.missoes} />
         </aside>
         <main className="overflow-hidden rounded-xl border border-borda bg-painel p-2">
           <Mapa
@@ -107,23 +109,28 @@ export function Mesa({
           />
         </main>
         <aside className={CLASSES_DO_PAINEL}>
-          <CartasDaMesa
-            baralho={partida.baralho}
-            abertasViradas={cartasAbertasViradas(evento)}
-            onComprarDoMonte={() =>
-              onExecutar((atual) => comprarCartaDoMonte(atual))
-            }
-            onComprarAberta={(indice) =>
-              onExecutar((atual) => comprarCartaAberta(atual, indice))
-            }
-          />
-          <MaoDoJogador mao={dono.mao} />
+          <MissoesDoJogador missoes={dono.missoes} />
+        </aside>
+      </div>
+      <div className={CLASSES_DA_FAIXA_DE_CARTAS}>
+        <CartasDaMesa
+          baralho={partida.baralho}
+          abertasViradas={cartasAbertasViradas(evento)}
+          onComprarDoMonte={() =>
+            onExecutar((atual) => comprarCartaDoMonte(atual))
+          }
+          onComprarAberta={(indice) =>
+            onExecutar((atual) => comprarCartaAberta(atual, indice))
+          }
+        />
+        <MaoDoJogador mao={dono.mao} />
+        <div className="w-60">
           <AcoesDaVez
             aviso={aviso}
             jogadaDoComputador={jogadaDoComputador}
             onComprarMissoes={() => onExecutar(comprarMissoes)}
           />
-        </aside>
+        </div>
       </div>
       {rotaEscolhida !== null && !vezDoComputador && (
         <PagamentoDaRota
