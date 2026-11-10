@@ -15,6 +15,17 @@ describe('criar jogador', () => {
     })
   })
 
+  it('aceita uma quantidade própria de caminhões', () => {
+    expect(criarJogador('ana', 'Ana', 20).caminhoes).toBe(20)
+  })
+
+  it.each([0, -3, 2.5, Number.NaN])(
+    'recusa quantidade inválida de caminhões (%j)',
+    (caminhoes) => {
+      expect(() => criarJogador('ana', 'Ana', caminhoes)).toThrow(RangeError)
+    },
+  )
+
   it.each(['', '   '])('recusa id vazio (%j)', (id) => {
     expect(() => criarJogador(id, 'Ana')).toThrow(RangeError)
   })

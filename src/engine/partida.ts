@@ -15,6 +15,7 @@ import {
 } from './baralho'
 import {
   CAMINHOES_PARA_ULTIMA_RODADA,
+  CAMINHOES_POR_JOGADOR,
   CARTA_CORINGA,
   CARTAS_INICIAIS_POR_JOGADOR,
   MAXIMO_DE_JOGADORES,
@@ -116,6 +117,17 @@ function validarNomes(nomes: readonly string[]): void {
   }
 }
 
+function validarCaminhoes(caminhoesPorJogador: number): void {
+  if (
+    !Number.isInteger(caminhoesPorJogador) ||
+    caminhoesPorJogador <= CAMINHOES_PARA_ULTIMA_RODADA
+  ) {
+    throw new RangeError(
+      `Caminhões por jogador inválidos: ${caminhoesPorJogador}. É preciso ter mais de ${CAMINHOES_PARA_ULTIMA_RODADA}.`,
+    )
+  }
+}
+
 function validarEventos(eventos: readonly Evento[]): void {
   if (eventos.length === 0) {
     throw new RangeError('É preciso ao menos um evento para a partida.')
@@ -161,14 +173,16 @@ export function criarPartida(
   nomes: readonly string[],
   conteudo: ConteudoDaPartida,
   aleatorio: Aleatorio = Math.random,
+  caminhoesPorJogador: number = CAMINHOES_POR_JOGADOR,
 ): Partida {
   validarNomes(nomes)
+  validarCaminhoes(caminhoesPorJogador)
   validarMissoes(conteudo.missoes, nomes.length)
   validarEventos(conteudo.eventos)
   validarCuriosidades(conteudo.curiosidades)
 
   const jogadores = nomes.map((nome, indice) =>
-    criarJogador(`jogador-${indice + 1}`, nome),
+    criarJogador(`jogador-${indice + 1}`, nome, caminhoesPorJogador),
   )
   const distribuicao = distribuirCartasIniciais(
     criarBaralho(aleatorio),

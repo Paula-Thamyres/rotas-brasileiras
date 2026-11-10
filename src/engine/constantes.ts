@@ -2,6 +2,8 @@ import type { CorDaCarta } from '../types/cartas'
 
 export const CAMINHOES_POR_JOGADOR = 45
 
+export const CAMINHOES_NA_PARTIDA_RAPIDA = 20
+
 export const CAMINHOES_PARA_ULTIMA_RODADA = 2
 
 export const PONTOS_CAMINHO_MAIS_LONGO = 10

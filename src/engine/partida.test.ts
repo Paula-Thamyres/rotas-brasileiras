@@ -20,6 +20,7 @@ import {
   type ResultadoDaAcao,
 } from './partida'
 import {
+  CAMINHOES_PARA_ULTIMA_RODADA,
   CAMINHOES_POR_JOGADOR,
   CARTA_CORINGA,
   CARTAS_ABERTAS_NA_MESA,
@@ -206,6 +207,33 @@ describe('criar partida', () => {
     'recusa quantidade inválida de jogadores (%j)',
     (nomes) => {
       expect(() => criarPartida(nomes, conteudoDeTeste)).toThrow(RangeError)
+    },
+  )
+
+  it('usa a quantidade de caminhões pedida para a partida', () => {
+    const partida = criarPartida(
+      ['Ana', 'Bia'],
+      conteudoDeTeste,
+      aleatorioComSemente(1),
+      20,
+    )
+
+    expect(partida.jogadores.map(({ caminhoes }) => caminhoes)).toEqual([
+      20, 20,
+    ])
+  })
+
+  it.each([0, CAMINHOES_PARA_ULTIMA_RODADA, 20.5, Number.NaN])(
+    'recusa caminhões que não deixam a partida começar (%j)',
+    (caminhoes) => {
+      expect(() =>
+        criarPartida(
+          ['Ana', 'Bia'],
+          conteudoDeTeste,
+          aleatorioComSemente(1),
+          caminhoes,
+        ),
+      ).toThrow(RangeError)
     },
   )
 
