@@ -88,10 +88,10 @@ export function TelaInicial({ onIniciar }: TelaInicialProps) {
     <main className="flex min-h-screen items-center justify-center p-4">
       <form
         onSubmit={enviar}
-        className="w-full max-w-md space-y-4 rounded-2xl border border-slate-700 bg-slate-800 p-6"
+        className="w-full max-w-md space-y-4 rounded-2xl border border-borda bg-painel p-6"
       >
         <h1 className="text-3xl font-bold">Rotas Brasileiras</h1>
-        <p className="text-sm text-slate-400">
+        <p className="text-sm text-suave">
           De {MINIMO_DE_JOGADORES} a {MAXIMO_DE_JOGADORES} jogadores. Cada vaga
           pode ser uma pessoa ou o computador.
         </p>
@@ -112,7 +112,7 @@ export function TelaInicial({ onIniciar }: TelaInicialProps) {
                 onChange={(evento) =>
                   alterar(indice, { nome: evento.target.value })
                 }
-                className="min-w-0 flex-1 rounded-lg border border-slate-600 bg-slate-900 px-3 py-2"
+                className="min-w-0 flex-1 rounded-lg border border-borda bg-interno px-3 py-2"
               />
               <select
                 value={participante.computador ? 'computador' : 'pessoa'}
@@ -120,7 +120,7 @@ export function TelaInicial({ onIniciar }: TelaInicialProps) {
                 onChange={(evento) =>
                   trocarTipo(indice, evento.target.value === 'computador')
                 }
-                className="rounded-lg border border-slate-600 bg-slate-900 px-2 py-2 text-sm"
+                className="rounded-lg border border-borda bg-interno px-2 py-2 text-sm"
               >
                 <option value="pessoa">Pessoa</option>
                 <option value="computador">Computador</option>
@@ -130,7 +130,7 @@ export function TelaInicial({ onIniciar }: TelaInicialProps) {
                   type="button"
                   aria-label={`Remover jogador ${indice + 1}`}
                   onClick={() => remover(indice)}
-                  className="cursor-pointer rounded-lg px-2 py-1 text-slate-400 hover:text-white"
+                  className="cursor-pointer rounded-lg px-2 py-1 text-suave hover:text-white"
                 >
                   Remover
                 </button>
@@ -142,7 +142,7 @@ export function TelaInicial({ onIniciar }: TelaInicialProps) {
           <button
             type="button"
             onClick={adicionar}
-            className="cursor-pointer text-sm text-amber-300 hover:underline"
+            className="cursor-pointer text-sm text-destaque hover:underline"
           >
             Adicionar jogador
           </button>
@@ -157,7 +157,7 @@ export function TelaInicial({ onIniciar }: TelaInicialProps) {
         )}
         <button
           type="submit"
-          className="w-full cursor-pointer rounded-lg bg-amber-400 px-4 py-2 font-bold text-slate-900"
+          className="w-full cursor-pointer rounded-lg bg-destaque px-4 py-2 font-bold text-interno"
         >
           Começar partida
         </button>

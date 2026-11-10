@@ -44,7 +44,7 @@ function GrupoDeOpcoes<T>({
         {opcoes.map((opcao) => (
           <label
             key={rotulo(opcao)}
-            className="cursor-pointer rounded-lg border border-slate-600 bg-slate-900 px-3 py-1.5 text-sm has-checked:border-amber-400 has-checked:bg-slate-700"
+            className="cursor-pointer rounded-lg border border-borda bg-interno px-3 py-1.5 text-sm has-checked:border-destaque has-checked:bg-borda"
           >
             <input
               type="radio"
@@ -87,13 +87,13 @@ export function PagamentoDaRota({
       role="dialog"
       aria-modal="true"
       aria-labelledby="titulo-do-pagamento"
-      className="fixed inset-0 z-10 flex items-center justify-center bg-slate-950/80 p-4"
+      className="fixed inset-0 z-10 flex items-center justify-center bg-interno/80 p-4"
     >
-      <div className="w-full max-w-md rounded-2xl border border-slate-600 bg-slate-800 p-6 shadow-xl">
+      <div className="w-full max-w-md rounded-2xl border border-borda bg-painel p-6 shadow-xl">
         <h2 id="titulo-do-pagamento" className="text-xl font-bold">
           {rota.cidadeA} a {rota.cidadeB}
         </h2>
-        <p className="mt-1 text-sm text-slate-400">
+        <p className="mt-1 text-sm text-suave">
           {rota.espacos} espaços · vale {pontos} pontos
         </p>
         <GrupoDeOpcoes
@@ -137,7 +137,7 @@ export function PagamentoDaRota({
           <button
             type="button"
             onClick={onCancelar}
-            className="flex-1 cursor-pointer rounded-lg bg-slate-600 px-4 py-2 font-bold hover:bg-slate-500"
+            className="flex-1 cursor-pointer rounded-lg bg-botao px-4 py-2 font-bold hover:bg-botao-hover"
           >
             Cancelar
           </button>
@@ -145,7 +145,7 @@ export function PagamentoDaRota({
             type="button"
             disabled={plano === null}
             onClick={() => plano !== null && onConfirmar(plano)}
-            className="flex-1 cursor-pointer rounded-lg bg-amber-400 px-4 py-2 font-bold text-slate-900 disabled:cursor-not-allowed disabled:bg-slate-600 disabled:text-slate-400"
+            className="flex-1 cursor-pointer rounded-lg bg-destaque px-4 py-2 font-bold text-interno disabled:cursor-not-allowed disabled:bg-borda disabled:text-suave"
           >
             Reivindicar
           </button>

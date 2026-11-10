@@ -12,8 +12,8 @@ export function FaixaDaVez({
   corDoJogador,
 }: FaixaDaVezProps) {
   const classes = vezDoComputador
-    ? 'border-slate-500 bg-slate-700'
-    : 'border-emerald-400 bg-emerald-900'
+    ? 'border-suave bg-borda'
+    : 'border-destaque bg-aviso'
 
   return (
     <section
@@ -29,7 +29,7 @@ export function FaixaDaVez({
       {vezDoComputador ? (
         <p className="text-lg font-bold">
           Vez de {nomeDaVez}
-          <span className="ml-2 text-sm font-normal text-slate-300">
+          <span className="ml-2 text-sm font-normal text-suave">
             Aguarde, o computador está jogando...
           </span>
         </p>

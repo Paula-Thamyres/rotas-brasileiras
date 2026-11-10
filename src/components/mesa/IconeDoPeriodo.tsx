@@ -11,7 +11,7 @@ export function IconeDoPeriodo({ periodo }: IconeDoPeriodoProps) {
         viewBox="0 0 24 24"
         aria-label="Dia"
         role="img"
-        className="h-6 w-6 text-amber-300"
+        className="h-6 w-6 text-destaque"
       >
         <circle cx="12" cy="12" r="5" fill="currentColor" />
         {[0, 45, 90, 135, 180, 225, 270, 315].map((angulo) => (

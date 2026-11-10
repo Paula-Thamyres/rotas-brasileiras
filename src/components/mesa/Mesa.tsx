@@ -45,7 +45,7 @@ interface MesaProps {
 }
 
 const CLASSES_DO_PAINEL =
-  'rounded-xl border border-slate-700 bg-slate-800 p-3 space-y-4'
+  'rounded-xl border border-borda bg-painel p-3 space-y-4'
 
 export function Mesa({
   partida,
@@ -99,7 +99,7 @@ export function Mesa({
           />
           <MissoesDoJogador missoes={dono.missoes} />
         </aside>
-        <main className="overflow-hidden rounded-xl border border-slate-700 bg-slate-800 p-2">
+        <main className="overflow-hidden rounded-xl border border-borda bg-painel p-2">
           <Mapa
             donosDasRotas={partida.donosDasRotas}
             jogadores={partida.jogadores}

@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+@theme static {
+  --color-fundo: #1a1033;
+  --color-painel: #2a1b4d;
+  --color-interno: #1a1033;
+  --color-borda: #4c3a7a;
+  --color-botao: #4c3a7a;
+  --color-botao-hover: #5f4a96;
+  --color-texto: #f5f3ff;
+  --color-suave: #b6a9d9;
+  --color-destaque: #fbbf24;
+  --color-aviso: #6d28d9;
+  --color-mapa-fundo: #d9d2e6;
+  --color-mapa-terra: #ece8f4;
+  --color-mapa-estrada: #4c3a7a;
+}
+
+[data-periodo='DIA'] {
+  --color-fundo: #e7e5f0;
+  --color-aviso: #15803d;
+  --color-mapa-fundo: #d3d1c7;
+  --color-mapa-terra: #f1efe8;
+  --color-mapa-estrada: #5f5e5a;
+}

@@ -39,7 +39,7 @@ export function CartaNaMesa({
         {virada ? '?' : rotulo}
       </span>
       {quantidade !== undefined && (
-        <span className="absolute -top-2 -right-2 rounded-full bg-slate-900 px-1.5 text-xs font-bold text-white ring-2 ring-white">
+        <span className="absolute -top-2 -right-2 rounded-full bg-interno px-1.5 text-xs font-bold text-white ring-2 ring-white">
           {quantidade}
         </span>
       )}
@@ -61,7 +61,7 @@ export function CartaNaMesa({
       type="button"
       aria-label={rotulo}
       onClick={onEscolher}
-      className={`${classes} cursor-pointer transition hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-amber-300`}
+      className={`${classes} cursor-pointer transition hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-destaque`}
       style={estiloDaCarta(carta, virada)}
     >
       {conteudo}

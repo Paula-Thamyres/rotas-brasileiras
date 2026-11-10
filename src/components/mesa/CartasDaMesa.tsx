@@ -16,14 +16,14 @@ export function CartasDaMesa({
 }: CartasDaMesaProps) {
   return (
     <section aria-label="Cartas da mesa">
-      <h2 className="mb-2 text-xs font-semibold tracking-wider text-slate-400 uppercase">
+      <h2 className="mb-2 text-xs font-semibold tracking-wider text-suave uppercase">
         Cartas abertas
       </h2>
       <div className="grid grid-cols-3 gap-2">
         <button
           type="button"
           onClick={onComprarDoMonte}
-          className="flex h-20 w-14 cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-white bg-slate-600 text-[10px] font-bold text-white shadow-md transition hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-amber-300"
+          className="flex h-20 w-14 cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-white bg-botao text-[10px] font-bold text-white shadow-md transition hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-destaque"
         >
           Monte
           <span className="text-xs">{baralho.monte.length}</span>

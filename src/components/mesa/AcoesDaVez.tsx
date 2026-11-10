@@ -20,17 +20,17 @@ export function AcoesDaVez({
         </p>
       )}
       {jogadaDoComputador !== null && (
-        <p className="rounded-lg bg-slate-900 p-2 text-sm">
+        <p className="rounded-lg bg-interno p-2 text-sm">
           {jogadaDoComputador}
         </p>
       )}
-      <p className="text-xs text-slate-400">
+      <p className="text-xs text-suave">
         Para reivindicar uma rota, clique nela no mapa.
       </p>
       <button
         type="button"
         onClick={onComprarMissoes}
-        className="w-full cursor-pointer rounded-lg bg-slate-600 px-3 py-2 text-sm font-bold hover:bg-slate-500"
+        className="w-full cursor-pointer rounded-lg bg-botao px-3 py-2 text-sm font-bold hover:bg-botao-hover"
       >
         Comprar missões
       </button>

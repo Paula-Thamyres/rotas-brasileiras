@@ -1,5 +1,6 @@
 import { TelaInicial } from './components/inicio/TelaInicial'
 import { Mesa } from './components/mesa/Mesa'
+import { periodoDoDia } from './engine/partida'
 import { usePartida } from './hooks/usePartida'
 
 function App() {
@@ -15,8 +16,10 @@ function App() {
     reiniciar,
   } = usePartida()
 
+  const periodo = partida === null ? 'NOITE' : periodoDoDia(partida)
+
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-100">
+    <div data-periodo={periodo} className="min-h-screen bg-fundo text-texto">
       {partida === null ? (
         <TelaInicial onIniciar={iniciar} />
       ) : (

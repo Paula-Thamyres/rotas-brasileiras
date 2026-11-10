@@ -4,7 +4,7 @@ import { idDaRota, type DonosDasRotas } from '../../engine/rotas'
 import type { Jogador } from '../../types/jogador'
 import type { Rota } from '../../types/mapa'
 import { corDoJogador } from '../../ui/jogadores'
-import { COR_DA_ROTA, TEMA_DIA } from './cores'
+import { COR_DA_ROTA, TEMA_DO_MAPA } from './cores'
 import { ALTURA_DO_MAPA, LARGURA_DO_MAPA, projetar } from './projecao'
 import { posicaoDoNome } from './posicaoDoNome'
 import { segmentosDaRota } from './segmentosDaRota'
@@ -55,9 +55,9 @@ export function Mapa({ donosDasRotas, jogadores, onEscolherRota }: MapaProps) {
       <rect
         width={LARGURA_DO_MAPA}
         height={ALTURA_DO_MAPA}
-        fill={TEMA_DIA.fundo}
+        fill={TEMA_DO_MAPA.fundo}
       />
-      <polygon points={pontosDoContorno} fill={TEMA_DIA.terra} />
+      <polygon points={pontosDoContorno} fill={TEMA_DO_MAPA.terra} />
 
       {mapa.rotas.map((rota) => {
         const origem = projetar(mapa.cidades[rota.cidadeA])
@@ -99,7 +99,7 @@ export function Mapa({ donosDasRotas, jogadores, onEscolherRota }: MapaProps) {
                   y1={inicio.y}
                   x2={fim.x}
                   y2={fim.y}
-                  stroke={TEMA_DIA.estrada}
+                  stroke={TEMA_DO_MAPA.estrada}
                   strokeWidth={ESPESSURA_DO_CONTORNO_DA_ROTA}
                 />
                 <line
@@ -137,8 +137,8 @@ export function Mapa({ donosDasRotas, jogadores, onEscolherRota }: MapaProps) {
               cx={x}
               cy={y}
               r={RAIO_DA_CIDADE}
-              fill={TEMA_DIA.terra}
-              stroke={TEMA_DIA.estrada}
+              fill={TEMA_DO_MAPA.terra}
+              stroke={TEMA_DO_MAPA.estrada}
               strokeWidth={2}
             />
             <text
@@ -146,8 +146,8 @@ export function Mapa({ donosDasRotas, jogadores, onEscolherRota }: MapaProps) {
               y={y + deslocamentoY}
               textAnchor={alinhamento}
               fontSize={TAMANHO_DO_NOME_DA_CIDADE}
-              fill={TEMA_DIA.estrada}
-              stroke={TEMA_DIA.terra}
+              fill={TEMA_DO_MAPA.estrada}
+              stroke={TEMA_DO_MAPA.terra}
               strokeWidth={3}
               paintOrder="stroke"
             >

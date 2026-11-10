@@ -16,12 +16,12 @@ const NOME_DO_PERIODO: Readonly<Record<PeriodoDoDia, string>> = {
 
 export function BarraDoDia({ rodada, periodo, evento }: BarraDoDiaProps) {
   return (
-    <header className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-700 bg-slate-800 px-4 py-3">
+    <header className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-borda bg-painel px-4 py-3">
       <p className="text-sm">Rodada {rodada}</p>
       <p className="flex items-center gap-2 text-sm">
         <IconeDoPeriodo periodo={periodo} />
         {NOME_DO_PERIODO[periodo]} · <strong>{evento.nome}</strong>
-        <span className="text-slate-400">{evento.descricao}</span>
+        <span className="text-suave">{evento.descricao}</span>
       </p>
       <BotaoComoJogar />
     </header>

@@ -12,8 +12,8 @@ export const COR_DA_ROTA: Readonly<Record<CodigoCor, string>> = {
   GR: '#B4B2A9',
 }
 
-export const TEMA_DIA = {
-  fundo: '#D3D1C7',
-  terra: '#F1EFE8',
-  estrada: '#5F5E5A',
+export const TEMA_DO_MAPA = {
+  fundo: 'var(--color-mapa-fundo)',
+  terra: 'var(--color-mapa-terra)',
+  estrada: 'var(--color-mapa-estrada)',
 } as const

@@ -11,11 +11,11 @@ export function MaoDoJogador({ mao }: MaoDoJogadorProps) {
 
   return (
     <section aria-label="Sua mão">
-      <h2 className="mb-2 text-xs font-semibold tracking-wider text-slate-400 uppercase">
+      <h2 className="mb-2 text-xs font-semibold tracking-wider text-suave uppercase">
         Sua mão
       </h2>
       {grupos.length === 0 ? (
-        <p className="text-sm text-slate-400">Você não tem cartas.</p>
+        <p className="text-sm text-suave">Você não tem cartas.</p>
       ) : (
         <div className="grid grid-cols-4 gap-x-2 gap-y-3">
           {grupos.map(({ carta, quantidade }) => (

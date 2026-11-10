@@ -16,14 +16,14 @@ interface ConfirmacaoDeSaidaProps {
 
 function ConfirmacaoDeSaida({ onContinuar, onSair }: ConfirmacaoDeSaidaProps) {
   return (
-    <div className="mt-5 rounded-lg border border-slate-600 bg-slate-900 p-4">
+    <div className="mt-5 rounded-lg border border-borda bg-interno p-4">
       <p className="font-semibold">Sair da partida?</p>
-      <p className="mt-1 text-sm text-slate-400">Você perde o jogo atual.</p>
+      <p className="mt-1 text-sm text-suave">Você perde o jogo atual.</p>
       <div className="mt-3 flex gap-2">
         <button
           type="button"
           onClick={onContinuar}
-          className="flex-1 cursor-pointer rounded-lg border border-slate-500 px-4 py-2 font-semibold"
+          className="flex-1 cursor-pointer rounded-lg border border-suave px-4 py-2 font-semibold"
         >
           Continuar jogando
         </button>
@@ -69,31 +69,31 @@ export function EscolhaDeMissoes({
       role="dialog"
       aria-modal="true"
       aria-labelledby="titulo-da-escolha-de-missoes"
-      className="fixed inset-0 z-10 flex items-center justify-center bg-slate-950/80 p-4"
+      className="fixed inset-0 z-10 flex items-center justify-center bg-interno/80 p-4"
     >
-      <div className="w-full max-w-lg rounded-2xl border border-slate-600 bg-slate-800 p-6 shadow-xl">
+      <div className="w-full max-w-lg rounded-2xl border border-borda bg-painel p-6 shadow-xl">
         <h2 id="titulo-da-escolha-de-missoes" className="text-xl font-bold">
           {nomeDoJogador}, escolha suas missões
         </h2>
-        <p className="mt-1 text-sm text-slate-400">
+        <p className="mt-1 text-sm text-suave">
           Missão é ligar as cidades indicadas com as suas rotas.
         </p>
-        <p className="mt-1 text-sm text-slate-400">
+        <p className="mt-1 text-sm text-suave">
           Marque pelo menos {oferta.minimoParaManter} para manter.
         </p>
         <ul className="mt-4 space-y-2">
           {oferta.missoes.map((missao) => (
             <li key={missao.nome}>
-              <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-slate-600 bg-slate-900 p-3 has-checked:border-amber-400">
+              <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-borda bg-interno p-3 has-checked:border-destaque">
                 <input
                   type="checkbox"
                   checked={escolhidas.has(missao.nome)}
                   onChange={() => alternar(missao.nome)}
-                  className="mt-1 h-4 w-4 accent-amber-400"
+                  className="mt-1 h-4 w-4 accent-destaque"
                 />
                 <span>
                   <span className="block font-semibold">{missao.nome}</span>
-                  <span className="block text-xs text-slate-400">
+                  <span className="block text-xs text-suave">
                     {descricaoDaMissao(missao)}
                   </span>
                   <span className="block text-xs">
@@ -121,14 +121,14 @@ export function EscolhaDeMissoes({
               type="button"
               disabled={faltam > 0}
               onClick={() => onConfirmar([...escolhidas])}
-              className="mt-5 w-full cursor-pointer rounded-lg bg-amber-400 px-4 py-2 font-bold text-slate-900 disabled:cursor-not-allowed disabled:bg-slate-600 disabled:text-slate-400"
+              className="mt-5 w-full cursor-pointer rounded-lg bg-destaque px-4 py-2 font-bold text-interno disabled:cursor-not-allowed disabled:bg-borda disabled:text-suave"
             >
               {rotuloDoBotao}
             </button>
             <button
               type="button"
               onClick={() => setConfirmandoSaida(true)}
-              className="mt-3 w-full cursor-pointer text-sm text-slate-400 hover:text-slate-200"
+              className="mt-3 w-full cursor-pointer text-sm text-suave hover:text-texto"
             >
               Voltar ao início
             </button>

@@ -14,9 +14,9 @@ export function CuriosidadeDescoberta({
       role="dialog"
       aria-modal="true"
       aria-labelledby="titulo-da-curiosidade"
-      className="fixed inset-0 z-20 flex items-center justify-center bg-slate-950/80 p-4"
+      className="fixed inset-0 z-20 flex items-center justify-center bg-interno/80 p-4"
     >
-      <div className="w-full max-w-md rounded-2xl border border-slate-600 bg-slate-800 p-6 shadow-xl">
+      <div className="w-full max-w-md rounded-2xl border border-borda bg-painel p-6 shadow-xl">
         <h2 id="titulo-da-curiosidade" className="text-xl font-bold">
           {descoberta.nomeDoJogador} descobriu uma curiosidade
         </h2>
@@ -32,7 +32,7 @@ export function CuriosidadeDescoberta({
                 href={curiosidade.fonte}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-1 inline-block text-xs text-amber-300 hover:underline"
+                className="mt-1 inline-block text-xs text-destaque hover:underline"
               >
                 Fonte
               </a>
@@ -42,7 +42,7 @@ export function CuriosidadeDescoberta({
         <button
           type="button"
           onClick={onFechar}
-          className="mt-5 w-full cursor-pointer rounded-lg bg-amber-400 px-4 py-2 font-bold text-slate-900"
+          className="mt-5 w-full cursor-pointer rounded-lg bg-destaque px-4 py-2 font-bold text-interno"
         >
           Continuar
         </button>

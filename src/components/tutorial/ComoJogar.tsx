@@ -25,10 +25,10 @@ function ComoJogar({ onFechar }: ComoJogarProps) {
       role="dialog"
       aria-modal="true"
       aria-labelledby="titulo-do-tutorial"
-      className="fixed inset-0 z-30 flex items-center justify-center bg-slate-950/80 p-4"
+      className="fixed inset-0 z-30 flex items-center justify-center bg-interno/80 p-4"
     >
-      <div className="w-full max-w-lg rounded-2xl border border-slate-600 bg-slate-800 p-6 shadow-xl">
-        <p className="text-xs font-semibold tracking-wider text-slate-400 uppercase">
+      <div className="w-full max-w-lg rounded-2xl border border-borda bg-painel p-6 shadow-xl">
+        <p className="text-xs font-semibold tracking-wider text-suave uppercase">
           Como jogar · {indice + 1} de {PASSOS_DO_TUTORIAL.length}
         </p>
         <h2 id="titulo-do-tutorial" className="mt-1 text-xl font-bold">
@@ -43,7 +43,7 @@ function ComoJogar({ onFechar }: ComoJogarProps) {
           <button
             type="button"
             onClick={onFechar}
-            className="cursor-pointer text-sm text-slate-400 hover:text-white"
+            className="cursor-pointer text-sm text-suave hover:text-white"
           >
             Fechar
           </button>
@@ -52,14 +52,14 @@ function ComoJogar({ onFechar }: ComoJogarProps) {
               type="button"
               disabled={ehPrimeiro}
               onClick={() => setIndice(indice - 1)}
-              className="cursor-pointer rounded-lg bg-slate-600 px-4 py-2 text-sm font-bold hover:bg-slate-500 disabled:cursor-not-allowed disabled:opacity-40"
+              className="cursor-pointer rounded-lg bg-botao px-4 py-2 text-sm font-bold hover:bg-botao-hover disabled:cursor-not-allowed disabled:opacity-40"
             >
               Voltar
             </button>
             <button
               type="button"
               onClick={ehUltimo ? onFechar : () => setIndice(indice + 1)}
-              className="cursor-pointer rounded-lg bg-amber-400 px-4 py-2 text-sm font-bold text-slate-900"
+              className="cursor-pointer rounded-lg bg-destaque px-4 py-2 text-sm font-bold text-interno"
             >
               {ehUltimo ? 'Entendi' : 'Próximo'}
             </button>
@@ -78,7 +78,7 @@ export function BotaoComoJogar() {
       <button
         type="button"
         onClick={() => setAberto(true)}
-        className="cursor-pointer rounded-lg border border-amber-300 px-3 py-1 text-sm font-bold text-amber-300 hover:bg-amber-300 hover:text-slate-900"
+        className="cursor-pointer rounded-lg border border-destaque px-3 py-1 text-sm font-bold text-destaque hover:bg-destaque hover:text-interno"
       >
         Como jogar
       </button>
