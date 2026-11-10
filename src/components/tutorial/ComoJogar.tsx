@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { PASSOS_DO_TUTORIAL } from '../../ui/tutorial'
+import { EsquemaDaTela } from './EsquemaDaTela'
 
 interface ComoJogarProps {
   readonly onFechar: () => void
@@ -34,10 +35,11 @@ function ComoJogar({ onFechar }: ComoJogarProps) {
         <h2 id="titulo-do-tutorial" className="mt-1 text-xl font-bold">
           {passo.titulo}
         </h2>
-        <div className="mt-4 min-h-40 space-y-3 text-sm leading-relaxed">
+        <div className="mt-4 max-h-[60vh] min-h-40 space-y-3 overflow-y-auto text-sm leading-relaxed">
           {passo.paragrafos.map((paragrafo) => (
             <p key={paragrafo}>{paragrafo}</p>
           ))}
+          {passo.ilustracao === 'ESQUEMA_DA_TELA' && <EsquemaDaTela />}
         </div>
         <div className="mt-5 flex items-center justify-between gap-2">
           <button
