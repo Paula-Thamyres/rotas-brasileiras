@@ -10,7 +10,14 @@
   --color-texto: #f5f3ff;
   --color-suave: #b6a9d9;
   --color-destaque: #fbbf24;
+  --color-destaque-texto: #fbbf24;
   --color-aviso: #6d28d9;
+  --color-ganho: #86efac;
+  --color-perda: #fca5a5;
+  --color-sobre-destaque: #1a1033;
+  --color-sobre-aviso: #ffffff;
+  --color-sombra: #1a1033;
+  --color-monte: #4c3a7a;
   --color-mapa-fundo: #d9d2e6;
   --color-mapa-terra: #ece8f4;
   --color-mapa-estrada: #4c3a7a;
@@ -18,7 +25,17 @@
 
 [data-periodo='DIA'] {
   --color-fundo: #e7e5f0;
+  --color-painel: #c9bdeb;
+  --color-interno: #ede9fa;
+  --color-borda: #a899d6;
+  --color-botao: #b3a5df;
+  --color-botao-hover: #a291d6;
+  --color-texto: #2a1b4d;
+  --color-suave: #4a3a78;
+  --color-destaque-texto: #92400e;
   --color-aviso: #15803d;
+  --color-ganho: #15803d;
+  --color-perda: #b91c1c;
   --color-mapa-fundo: #d3d1c7;
   --color-mapa-terra: #f1efe8;
   --color-mapa-estrada: #5f5e5a;

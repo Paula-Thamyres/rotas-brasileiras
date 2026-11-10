@@ -87,7 +87,7 @@ export function PagamentoDaRota({
       role="dialog"
       aria-modal="true"
       aria-labelledby="titulo-do-pagamento"
-      className="fixed inset-0 z-10 flex items-center justify-center bg-interno/80 p-4"
+      className="fixed inset-0 z-10 flex items-center justify-center bg-sombra/80 p-4"
     >
       <div className="w-full max-w-md rounded-2xl border border-borda bg-painel p-6 shadow-xl">
         <h2 id="titulo-do-pagamento" className="text-xl font-bold">
@@ -145,7 +145,7 @@ export function PagamentoDaRota({
             type="button"
             disabled={plano === null}
             onClick={() => plano !== null && onConfirmar(plano)}
-            className="flex-1 cursor-pointer rounded-lg bg-destaque px-4 py-2 font-bold text-interno disabled:cursor-not-allowed disabled:bg-borda disabled:text-suave"
+            className="flex-1 cursor-pointer rounded-lg bg-destaque px-4 py-2 font-bold text-sobre-destaque disabled:cursor-not-allowed disabled:bg-borda disabled:text-suave"
           >
             Reivindicar
           </button>

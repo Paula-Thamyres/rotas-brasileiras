@@ -36,13 +36,13 @@ export function PainelDosJogadores({
               {idsDosComputadores.has(jogador.id) && (
                 <span
                   title="Controlado pelo computador"
-                  className="rounded bg-borda px-1.5 text-[10px] font-bold text-suave"
+                  className="rounded bg-borda px-1.5 text-xs font-bold text-suave"
                 >
                   PC
                 </span>
               )}
             </div>
-            <p className="mt-1 text-xs text-suave">
+            <p className="mt-1 text-sm text-suave">
               {jogador.pontos} pts · {jogador.caminhoes} caminhões ·{' '}
               {jogador.mao.length} cartas · {jogador.missoes.length} missões
             </p>

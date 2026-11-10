@@ -23,7 +23,7 @@ export function MissoesDoJogador({ missoes }: MissoesDoJogadorProps) {
               <p className="font-semibold">
                 {missao.nome} · {missao.pontos} pts
               </p>
-              <p className="text-xs text-suave">
+              <p className="text-sm text-suave">
                 {descricaoDaMissao(missao)}
               </p>
             </li>

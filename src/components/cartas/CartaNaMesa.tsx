@@ -35,18 +35,18 @@ export function CartaNaMesa({
   const rotulo = virada ? 'Carta virada' : nomeDaCarta(carta)
   const conteudo = (
     <>
-      <span className="px-1 text-center text-[10px] leading-tight font-bold">
+      <span className="px-1 text-center text-xs leading-tight font-bold">
         {virada ? '?' : rotulo}
       </span>
       {quantidade !== undefined && (
-        <span className="absolute -top-2 -right-2 rounded-full bg-interno px-1.5 text-xs font-bold text-white ring-2 ring-white">
+        <span className="absolute -top-2 -right-2 rounded-full bg-sombra px-1.5 text-sm font-bold text-white ring-2 ring-white">
           {quantidade}
         </span>
       )}
     </>
   )
   const classes =
-    'relative flex h-20 w-14 items-center justify-center rounded-lg border-2 border-white shadow-md'
+    'relative flex h-24 w-16 items-center justify-center rounded-lg border-2 border-white shadow-md'
 
   if (onEscolher === undefined) {
     return (

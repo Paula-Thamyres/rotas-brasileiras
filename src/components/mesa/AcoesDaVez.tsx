@@ -24,7 +24,7 @@ export function AcoesDaVez({
           {jogadaDoComputador}
         </p>
       )}
-      <p className="text-xs text-suave">
+      <p className="text-sm text-suave">
         Para reivindicar uma rota, clique nela no mapa.
       </p>
       <button

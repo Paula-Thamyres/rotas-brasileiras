@@ -130,7 +130,7 @@ export function TelaInicial({ onIniciar }: TelaInicialProps) {
                   type="button"
                   aria-label={`Remover jogador ${indice + 1}`}
                   onClick={() => remover(indice)}
-                  className="cursor-pointer rounded-lg px-2 py-1 text-suave hover:text-white"
+                  className="cursor-pointer rounded-lg px-2 py-1 text-suave hover:text-texto"
                 >
                   Remover
                 </button>
@@ -142,7 +142,7 @@ export function TelaInicial({ onIniciar }: TelaInicialProps) {
           <button
             type="button"
             onClick={adicionar}
-            className="cursor-pointer text-sm text-destaque hover:underline"
+            className="cursor-pointer text-sm text-destaque-texto hover:underline"
           >
             Adicionar jogador
           </button>
@@ -157,7 +157,7 @@ export function TelaInicial({ onIniciar }: TelaInicialProps) {
         )}
         <button
           type="submit"
-          className="w-full cursor-pointer rounded-lg bg-destaque px-4 py-2 font-bold text-interno"
+          className="w-full cursor-pointer rounded-lg bg-destaque px-4 py-2 font-bold text-sobre-destaque"
         >
           Começar partida
         </button>

@@ -13,7 +13,7 @@ export function FaixaDaVez({
 }: FaixaDaVezProps) {
   const classes = vezDoComputador
     ? 'border-suave bg-borda'
-    : 'border-destaque bg-aviso'
+    : 'border-destaque bg-aviso text-sobre-aviso'
 
   return (
     <section

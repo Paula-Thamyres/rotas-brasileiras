@@ -25,7 +25,7 @@ function ComoJogar({ onFechar }: ComoJogarProps) {
       role="dialog"
       aria-modal="true"
       aria-labelledby="titulo-do-tutorial"
-      className="fixed inset-0 z-30 flex items-center justify-center bg-interno/80 p-4"
+      className="fixed inset-0 z-30 flex items-center justify-center bg-sombra/80 p-4"
     >
       <div className="w-full max-w-lg rounded-2xl border border-borda bg-painel p-6 shadow-xl">
         <p className="text-xs font-semibold tracking-wider text-suave uppercase">
@@ -43,7 +43,7 @@ function ComoJogar({ onFechar }: ComoJogarProps) {
           <button
             type="button"
             onClick={onFechar}
-            className="cursor-pointer text-sm text-suave hover:text-white"
+            className="cursor-pointer text-sm text-suave hover:text-texto"
           >
             Fechar
           </button>
@@ -59,7 +59,7 @@ function ComoJogar({ onFechar }: ComoJogarProps) {
             <button
               type="button"
               onClick={ehUltimo ? onFechar : () => setIndice(indice + 1)}
-              className="cursor-pointer rounded-lg bg-destaque px-4 py-2 text-sm font-bold text-interno"
+              className="cursor-pointer rounded-lg bg-destaque px-4 py-2 text-sm font-bold text-sobre-destaque"
             >
               {ehUltimo ? 'Entendi' : 'Próximo'}
             </button>
@@ -78,7 +78,7 @@ export function BotaoComoJogar() {
       <button
         type="button"
         onClick={() => setAberto(true)}
-        className="cursor-pointer rounded-lg border border-destaque px-3 py-1 text-sm font-bold text-destaque hover:bg-destaque hover:text-interno"
+        className="cursor-pointer rounded-lg border border-destaque-texto px-3 py-1 text-sm font-bold text-destaque-texto hover:bg-destaque hover:text-sobre-destaque"
       >
         Como jogar
       </button>

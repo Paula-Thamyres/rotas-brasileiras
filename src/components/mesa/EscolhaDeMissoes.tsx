@@ -69,7 +69,7 @@ export function EscolhaDeMissoes({
       role="dialog"
       aria-modal="true"
       aria-labelledby="titulo-da-escolha-de-missoes"
-      className="fixed inset-0 z-10 flex items-center justify-center bg-interno/80 p-4"
+      className="fixed inset-0 z-10 flex items-center justify-center bg-sombra/80 p-4"
     >
       <div className="w-full max-w-lg rounded-2xl border border-borda bg-painel p-6 shadow-xl">
         <h2 id="titulo-da-escolha-de-missoes" className="text-xl font-bold">
@@ -97,11 +97,11 @@ export function EscolhaDeMissoes({
                     {descricaoDaMissao(missao)}
                   </span>
                   <span className="block text-xs">
-                    <span className="text-green-300">
+                    <span className="text-ganho">
                       +{missao.pontos} se ligar
                     </span>
                     {' · '}
-                    <span className="text-red-300">
+                    <span className="text-perda">
                       -{missao.pontos} se não ligar
                     </span>
                   </span>
@@ -121,7 +121,7 @@ export function EscolhaDeMissoes({
               type="button"
               disabled={faltam > 0}
               onClick={() => onConfirmar([...escolhidas])}
-              className="mt-5 w-full cursor-pointer rounded-lg bg-destaque px-4 py-2 font-bold text-interno disabled:cursor-not-allowed disabled:bg-borda disabled:text-suave"
+              className="mt-5 w-full cursor-pointer rounded-lg bg-destaque px-4 py-2 font-bold text-sobre-destaque disabled:cursor-not-allowed disabled:bg-borda disabled:text-suave"
             >
               {rotuloDoBotao}
             </button>
