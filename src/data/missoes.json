@@ -1,0 +1,287 @@
+[
+ {
+  "tipo": "ligacao",
+  "nome": "Manaus a Porto Alegre",
+  "cidades": [
+   "Manaus",
+   "Porto Alegre"
+  ],
+  "pontos": 20
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "Rio Branco a Recife",
+  "cidades": [
+   "Rio Branco",
+   "Recife"
+  ],
+  "pontos": 24
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "Macapá a Pelotas",
+  "cidades": [
+   "Macapá",
+   "Pelotas"
+  ],
+  "pontos": 23
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "Boa Vista a Curitiba",
+  "cidades": [
+   "Boa Vista",
+   "Curitiba"
+  ],
+  "pontos": 23
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "Belém a Rio de Janeiro",
+  "cidades": [
+   "Belém",
+   "Rio de Janeiro"
+  ],
+  "pontos": 15
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "Fortaleza a São Paulo",
+  "cidades": [
+   "Fortaleza",
+   "São Paulo"
+  ],
+  "pontos": 15
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "Porto Velho a Salvador",
+  "cidades": [
+   "Porto Velho",
+   "Salvador"
+  ],
+  "pontos": 18
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "Santarém a Brasília",
+  "cidades": [
+   "Santarém",
+   "Brasília"
+  ],
+  "pontos": 10
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "Cuiabá a Vitória",
+  "cidades": [
+   "Cuiabá",
+   "Vitória"
+  ],
+  "pontos": 10
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "Goiânia a Natal",
+  "cidades": [
+   "Goiânia",
+   "Natal"
+  ],
+  "pontos": 11
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "Brasília a Salvador",
+  "cidades": [
+   "Brasília",
+   "Salvador"
+  ],
+  "pontos": 7
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "Campo Grande a Belo Horizonte",
+  "cidades": [
+   "Campo Grande",
+   "Belo Horizonte"
+  ],
+  "pontos": 7
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "Marabá a Florianópolis",
+  "cidades": [
+   "Marabá",
+   "Florianópolis"
+  ],
+  "pontos": 15
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "Palmas a Maceió",
+  "cidades": [
+   "Palmas",
+   "Maceió"
+  ],
+  "pontos": 8
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "Corumbá a Uberlândia",
+  "cidades": [
+   "Corumbá",
+   "Uberlândia"
+  ],
+  "pontos": 8
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "Teresina a Goiânia",
+  "cidades": [
+   "Teresina",
+   "Goiânia"
+  ],
+  "pontos": 9
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "Foz do Iguaçu a Ribeirão Preto",
+  "cidades": [
+   "Foz do Iguaçu",
+   "Ribeirão Preto"
+  ],
+  "pontos": 7
+ },
+ {
+  "tipo": "ligacao",
+  "nome": "São Luís a Aracaju",
+  "cidades": [
+   "São Luís",
+   "Aracaju"
+  ],
+  "pontos": 7
+ },
+ {
+  "tipo": "regiao",
+  "nome": "Costa do Nordeste",
+  "cidades": [
+   "Fortaleza",
+   "Recife",
+   "Salvador"
+  ],
+  "pontos": 10
+ },
+ {
+  "tipo": "regiao",
+  "nome": "Capitais do Sul",
+  "cidades": [
+   "Curitiba",
+   "Florianópolis",
+   "Porto Alegre"
+  ],
+  "pontos": 5
+ },
+ {
+  "tipo": "regiao",
+  "nome": "Triângulo do Sudeste",
+  "cidades": [
+   "São Paulo",
+   "Rio de Janeiro",
+   "Belo Horizonte"
+  ],
+  "pontos": 6
+ },
+ {
+  "tipo": "regiao",
+  "nome": "Norte das Águas",
+  "cidades": [
+   "Manaus",
+   "Belém",
+   "Boa Vista"
+  ],
+  "pontos": 14
+ },
+ {
+  "tipo": "regiao",
+  "nome": "Rota do Pantanal",
+  "cidades": [
+   "Cuiabá",
+   "Campo Grande",
+   "Corumbá"
+  ],
+  "pontos": 6
+ },
+ {
+  "tipo": "regiao",
+  "nome": "Coração do Centro-Oeste",
+  "cidades": [
+   "Brasília",
+   "Goiânia",
+   "Cuiabá",
+   "Campo Grande"
+  ],
+  "pontos": 10
+ },
+ {
+  "tipo": "regiao",
+  "nome": "Meio-Norte",
+  "cidades": [
+   "São Luís",
+   "Teresina",
+   "Fortaleza"
+  ],
+  "pontos": 7
+ },
+ {
+  "tipo": "regiao",
+  "nome": "Litoral Nordestino",
+  "cidades": [
+   "Natal",
+   "Recife",
+   "Maceió",
+   "Aracaju"
+  ],
+  "pontos": 5
+ },
+ {
+  "tipo": "regiao",
+  "nome": "Amazônia Ocidental",
+  "cidades": [
+   "Rio Branco",
+   "Porto Velho",
+   "Manaus"
+  ],
+  "pontos": 9
+ },
+ {
+  "tipo": "regiao",
+  "nome": "Sertão e Cerrado",
+  "cidades": [
+   "Petrolina",
+   "Barreiras",
+   "Montes Claros"
+  ],
+  "pontos": 8
+ },
+ {
+  "tipo": "regiao",
+  "nome": "Litoral do Sudeste",
+  "cidades": [
+   "Vitória",
+   "Rio de Janeiro",
+   "São Paulo",
+   "Florianópolis"
+  ],
+  "pontos": 9
+ },
+ {
+  "tipo": "regiao",
+  "nome": "Fronteira Sul",
+  "cidades": [
+   "Foz do Iguaçu",
+   "Porto Alegre",
+   "Pelotas"
+  ],
+  "pontos": 7
+ }
+]

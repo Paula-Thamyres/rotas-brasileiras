@@ -1,0 +1,861 @@
+{
+  "cidades": {
+    "Boa Vista": {
+      "lon": -60.67,
+      "lat": 2.82
+    },
+    "Macapá": {
+      "lon": -51.07,
+      "lat": 0.03
+    },
+    "Manaus": {
+      "lon": -60.02,
+      "lat": -3.12
+    },
+    "Belém": {
+      "lon": -48.5,
+      "lat": -1.45
+    },
+    "Santarém": {
+      "lon": -54.7,
+      "lat": -2.44
+    },
+    "Marabá": {
+      "lon": -49.1,
+      "lat": -5.37
+    },
+    "Porto Velho": {
+      "lon": -63.9,
+      "lat": -8.76
+    },
+    "Rio Branco": {
+      "lon": -67.81,
+      "lat": -9.97
+    },
+    "Palmas": {
+      "lon": -48.33,
+      "lat": -10.18
+    },
+    "Goiânia": {
+      "lon": -50.76,
+      "lat": -16.74
+    },
+    "Brasília": {
+      "lon": -47.24,
+      "lat": -14.09
+    },
+    "Uberlândia": {
+      "lon": -49.88,
+      "lat": -19.79
+    },
+    "Montes Claros": {
+      "lon": -42.53,
+      "lat": -15.79
+    },
+    "Barreiras": {
+      "lon": -45.06,
+      "lat": -11.56
+    },
+    "Cuiabá": {
+      "lon": -57.06,
+      "lat": -14.62
+    },
+    "Campo Grande": {
+      "lon": -55.88,
+      "lat": -21.09
+    },
+    "Corumbá": {
+      "lon": -57.65,
+      "lat": -19.0
+    },
+    "Teresina": {
+      "lon": -42.8,
+      "lat": -5.09
+    },
+    "Petrolina": {
+      "lon": -40.5,
+      "lat": -9.4
+    },
+    "São Luís": {
+      "lon": -44.3,
+      "lat": -2.53
+    },
+    "Fortaleza": {
+      "lon": -38.54,
+      "lat": -3.73
+    },
+    "Natal": {
+      "lon": -35.2,
+      "lat": -5.79
+    },
+    "Recife": {
+      "lon": -34.88,
+      "lat": -8.05
+    },
+    "Maceió": {
+      "lon": -35.7,
+      "lat": -9.67
+    },
+    "Aracaju": {
+      "lon": -37.07,
+      "lat": -10.91
+    },
+    "Salvador": {
+      "lon": -37.82,
+      "lat": -12.62
+    },
+    "Vitória": {
+      "lon": -39.76,
+      "lat": -20.26
+    },
+    "Belo Horizonte": {
+      "lon": -43.71,
+      "lat": -19.09
+    },
+    "Rio de Janeiro": {
+      "lon": -42.12,
+      "lat": -23.62
+    },
+    "São Paulo": {
+      "lon": -45.76,
+      "lat": -24.79
+    },
+    "Ribeirão Preto": {
+      "lon": -49.29,
+      "lat": -22.62
+    },
+    "Curitiba": {
+      "lon": -49.41,
+      "lat": -26.38
+    },
+    "Foz do Iguaçu": {
+      "lon": -54.58,
+      "lat": -25.55
+    },
+    "Florianópolis": {
+      "lon": -48.12,
+      "lat": -28.5
+    },
+    "Porto Alegre": {
+      "lon": -51.2,
+      "lat": -30.03
+    },
+    "Pelotas": {
+      "lon": -52.34,
+      "lat": -31.77
+    }
+  },
+  "rotas": [
+    {
+      "cidadeA": "Boa Vista",
+      "cidadeB": "Manaus",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "AM"
+    },
+    {
+      "cidadeA": "Manaus",
+      "cidadeB": "Porto Velho",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "AM"
+    },
+    {
+      "cidadeA": "Manaus",
+      "cidadeB": "Santarém",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "AM"
+    },
+    {
+      "cidadeA": "Santarém",
+      "cidadeB": "Belém",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "AM"
+    },
+    {
+      "cidadeA": "Belém",
+      "cidadeB": "Macapá",
+      "espacos": 2,
+      "paralela": null,
+      "cor": "AM"
+    },
+    {
+      "cidadeA": "Belém",
+      "cidadeB": "São Luís",
+      "espacos": 3,
+      "paralela": 0,
+      "cor": "LI"
+    },
+    {
+      "cidadeA": "Belém",
+      "cidadeB": "São Luís",
+      "espacos": 3,
+      "paralela": 1,
+      "cor": "AM"
+    },
+    {
+      "cidadeA": "Belém",
+      "cidadeB": "Marabá",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "AM"
+    },
+    {
+      "cidadeA": "Santarém",
+      "cidadeB": "Marabá",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "AM"
+    },
+    {
+      "cidadeA": "Porto Velho",
+      "cidadeB": "Rio Branco",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "AM"
+    },
+    {
+      "cidadeA": "Rio Branco",
+      "cidadeB": "Manaus",
+      "espacos": 6,
+      "paralela": null,
+      "cor": "GR"
+    },
+    {
+      "cidadeA": "Porto Velho",
+      "cidadeB": "Cuiabá",
+      "espacos": 6,
+      "paralela": null,
+      "cor": "GR"
+    },
+    {
+      "cidadeA": "Marabá",
+      "cidadeB": "Palmas",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "CE"
+    },
+    {
+      "cidadeA": "Marabá",
+      "cidadeB": "São Luís",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "LI"
+    },
+    {
+      "cidadeA": "Marabá",
+      "cidadeB": "Teresina",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "CA"
+    },
+    {
+      "cidadeA": "Palmas",
+      "cidadeB": "Brasília",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "CE"
+    },
+    {
+      "cidadeA": "Palmas",
+      "cidadeB": "Goiânia",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "CE"
+    },
+    {
+      "cidadeA": "Palmas",
+      "cidadeB": "Barreiras",
+      "espacos": 2,
+      "paralela": null,
+      "cor": "CE"
+    },
+    {
+      "cidadeA": "São Luís",
+      "cidadeB": "Teresina",
+      "espacos": 2,
+      "paralela": 0,
+      "cor": "CA"
+    },
+    {
+      "cidadeA": "São Luís",
+      "cidadeB": "Teresina",
+      "espacos": 2,
+      "paralela": 1,
+      "cor": "LI"
+    },
+    {
+      "cidadeA": "Teresina",
+      "cidadeB": "Fortaleza",
+      "espacos": 3,
+      "paralela": 0,
+      "cor": "CA"
+    },
+    {
+      "cidadeA": "Teresina",
+      "cidadeB": "Fortaleza",
+      "espacos": 3,
+      "paralela": 1,
+      "cor": "LI"
+    },
+    {
+      "cidadeA": "Teresina",
+      "cidadeB": "Petrolina",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "CA"
+    },
+    {
+      "cidadeA": "São Luís",
+      "cidadeB": "Fortaleza",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "LI"
+    },
+    {
+      "cidadeA": "Fortaleza",
+      "cidadeB": "Natal",
+      "espacos": 3,
+      "paralela": 0,
+      "cor": "LI"
+    },
+    {
+      "cidadeA": "Fortaleza",
+      "cidadeB": "Natal",
+      "espacos": 3,
+      "paralela": 1,
+      "cor": "GR"
+    },
+    {
+      "cidadeA": "Fortaleza",
+      "cidadeB": "Petrolina",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "CA"
+    },
+    {
+      "cidadeA": "Natal",
+      "cidadeB": "Recife",
+      "espacos": 1,
+      "paralela": 0,
+      "cor": "LI"
+    },
+    {
+      "cidadeA": "Natal",
+      "cidadeB": "Recife",
+      "espacos": 1,
+      "paralela": 1,
+      "cor": "GR"
+    },
+    {
+      "cidadeA": "Recife",
+      "cidadeB": "Maceió",
+      "espacos": 1,
+      "paralela": null,
+      "cor": "LI"
+    },
+    {
+      "cidadeA": "Recife",
+      "cidadeB": "Petrolina",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "CA"
+    },
+    {
+      "cidadeA": "Maceió",
+      "cidadeB": "Aracaju",
+      "espacos": 1,
+      "paralela": null,
+      "cor": "LI"
+    },
+    {
+      "cidadeA": "Aracaju",
+      "cidadeB": "Salvador",
+      "espacos": 2,
+      "paralela": 0,
+      "cor": "LI"
+    },
+    {
+      "cidadeA": "Aracaju",
+      "cidadeB": "Salvador",
+      "espacos": 2,
+      "paralela": 1,
+      "cor": "GR"
+    },
+    {
+      "cidadeA": "Salvador",
+      "cidadeB": "Petrolina",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "CA"
+    },
+    {
+      "cidadeA": "Salvador",
+      "cidadeB": "Barreiras",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "CE"
+    },
+    {
+      "cidadeA": "Salvador",
+      "cidadeB": "Montes Claros",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "CE"
+    },
+    {
+      "cidadeA": "Salvador",
+      "cidadeB": "Vitória",
+      "espacos": 5,
+      "paralela": null,
+      "cor": "LI"
+    },
+    {
+      "cidadeA": "Barreiras",
+      "cidadeB": "Brasília",
+      "espacos": 3,
+      "paralela": 0,
+      "cor": "CE"
+    },
+    {
+      "cidadeA": "Barreiras",
+      "cidadeB": "Brasília",
+      "espacos": 3,
+      "paralela": 1,
+      "cor": "GR"
+    },
+    {
+      "cidadeA": "Barreiras",
+      "cidadeB": "Montes Claros",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "CA"
+    },
+    {
+      "cidadeA": "Petrolina",
+      "cidadeB": "Barreiras",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "CE"
+    },
+    {
+      "cidadeA": "Brasília",
+      "cidadeB": "Goiânia",
+      "espacos": 1,
+      "paralela": 0,
+      "cor": "CE"
+    },
+    {
+      "cidadeA": "Brasília",
+      "cidadeB": "Goiânia",
+      "espacos": 1,
+      "paralela": 1,
+      "cor": "GR"
+    },
+    {
+      "cidadeA": "Brasília",
+      "cidadeB": "Montes Claros",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "SE"
+    },
+    {
+      "cidadeA": "Brasília",
+      "cidadeB": "Uberlândia",
+      "espacos": 2,
+      "paralela": 0,
+      "cor": "SE"
+    },
+    {
+      "cidadeA": "Brasília",
+      "cidadeB": "Uberlândia",
+      "espacos": 2,
+      "paralela": 1,
+      "cor": "CE"
+    },
+    {
+      "cidadeA": "Brasília",
+      "cidadeB": "Belo Horizonte",
+      "espacos": 4,
+      "paralela": 0,
+      "cor": "SE"
+    },
+    {
+      "cidadeA": "Brasília",
+      "cidadeB": "Belo Horizonte",
+      "espacos": 4,
+      "paralela": 1,
+      "cor": "MA"
+    },
+    {
+      "cidadeA": "Goiânia",
+      "cidadeB": "Cuiabá",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "PA"
+    },
+    {
+      "cidadeA": "Goiânia",
+      "cidadeB": "Uberlândia",
+      "espacos": 2,
+      "paralela": 0,
+      "cor": "CE"
+    },
+    {
+      "cidadeA": "Goiânia",
+      "cidadeB": "Uberlândia",
+      "espacos": 2,
+      "paralela": 1,
+      "cor": "GR"
+    },
+    {
+      "cidadeA": "Cuiabá",
+      "cidadeB": "Campo Grande",
+      "espacos": 3,
+      "paralela": 0,
+      "cor": "PA"
+    },
+    {
+      "cidadeA": "Cuiabá",
+      "cidadeB": "Campo Grande",
+      "espacos": 3,
+      "paralela": 1,
+      "cor": "GR"
+    },
+    {
+      "cidadeA": "Cuiabá",
+      "cidadeB": "Corumbá",
+      "espacos": 2,
+      "paralela": null,
+      "cor": "PA"
+    },
+    {
+      "cidadeA": "Campo Grande",
+      "cidadeB": "Corumbá",
+      "espacos": 2,
+      "paralela": null,
+      "cor": "PA"
+    },
+    {
+      "cidadeA": "Campo Grande",
+      "cidadeB": "Goiânia",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "PA"
+    },
+    {
+      "cidadeA": "Campo Grande",
+      "cidadeB": "São Paulo",
+      "espacos": 5,
+      "paralela": null,
+      "cor": "PA"
+    },
+    {
+      "cidadeA": "Campo Grande",
+      "cidadeB": "Foz do Iguaçu",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "PM"
+    },
+    {
+      "cidadeA": "Campo Grande",
+      "cidadeB": "Ribeirão Preto",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "PA"
+    },
+    {
+      "cidadeA": "Uberlândia",
+      "cidadeB": "Ribeirão Preto",
+      "espacos": 2,
+      "paralela": 0,
+      "cor": "SE"
+    },
+    {
+      "cidadeA": "Uberlândia",
+      "cidadeB": "Ribeirão Preto",
+      "espacos": 2,
+      "paralela": 1,
+      "cor": "MA"
+    },
+    {
+      "cidadeA": "Uberlândia",
+      "cidadeB": "Belo Horizonte",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "SE"
+    },
+    {
+      "cidadeA": "Montes Claros",
+      "cidadeB": "Belo Horizonte",
+      "espacos": 2,
+      "paralela": null,
+      "cor": "CE"
+    },
+    {
+      "cidadeA": "Belo Horizonte",
+      "cidadeB": "Vitória",
+      "espacos": 2,
+      "paralela": 0,
+      "cor": "MA"
+    },
+    {
+      "cidadeA": "Belo Horizonte",
+      "cidadeB": "Vitória",
+      "espacos": 2,
+      "paralela": 1,
+      "cor": "SE"
+    },
+    {
+      "cidadeA": "Belo Horizonte",
+      "cidadeB": "Rio de Janeiro",
+      "espacos": 2,
+      "paralela": 0,
+      "cor": "MA"
+    },
+    {
+      "cidadeA": "Belo Horizonte",
+      "cidadeB": "Rio de Janeiro",
+      "espacos": 2,
+      "paralela": 1,
+      "cor": "SE"
+    },
+    {
+      "cidadeA": "Belo Horizonte",
+      "cidadeB": "São Paulo",
+      "espacos": 3,
+      "paralela": 0,
+      "cor": "MA"
+    },
+    {
+      "cidadeA": "Belo Horizonte",
+      "cidadeB": "São Paulo",
+      "espacos": 3,
+      "paralela": 1,
+      "cor": "SE"
+    },
+    {
+      "cidadeA": "Belo Horizonte",
+      "cidadeB": "Ribeirão Preto",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "MA"
+    },
+    {
+      "cidadeA": "Vitória",
+      "cidadeB": "Rio de Janeiro",
+      "espacos": 2,
+      "paralela": 0,
+      "cor": "MA"
+    },
+    {
+      "cidadeA": "Vitória",
+      "cidadeB": "Rio de Janeiro",
+      "espacos": 2,
+      "paralela": 1,
+      "cor": "SE"
+    },
+    {
+      "cidadeA": "Rio de Janeiro",
+      "cidadeB": "São Paulo",
+      "espacos": 2,
+      "paralela": 0,
+      "cor": "SE"
+    },
+    {
+      "cidadeA": "Rio de Janeiro",
+      "cidadeB": "São Paulo",
+      "espacos": 2,
+      "paralela": 1,
+      "cor": "MA"
+    },
+    {
+      "cidadeA": "São Paulo",
+      "cidadeB": "Ribeirão Preto",
+      "espacos": 2,
+      "paralela": 0,
+      "cor": "SE"
+    },
+    {
+      "cidadeA": "São Paulo",
+      "cidadeB": "Ribeirão Preto",
+      "espacos": 2,
+      "paralela": 1,
+      "cor": "MA"
+    },
+    {
+      "cidadeA": "São Paulo",
+      "cidadeB": "Curitiba",
+      "espacos": 2,
+      "paralela": 0,
+      "cor": "SE"
+    },
+    {
+      "cidadeA": "São Paulo",
+      "cidadeB": "Curitiba",
+      "espacos": 2,
+      "paralela": 1,
+      "cor": "PM"
+    },
+    {
+      "cidadeA": "Curitiba",
+      "cidadeB": "Florianópolis",
+      "espacos": 1,
+      "paralela": 0,
+      "cor": "PM"
+    },
+    {
+      "cidadeA": "Curitiba",
+      "cidadeB": "Florianópolis",
+      "espacos": 1,
+      "paralela": 1,
+      "cor": "LI"
+    },
+    {
+      "cidadeA": "Curitiba",
+      "cidadeB": "Foz do Iguaçu",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "PM"
+    },
+    {
+      "cidadeA": "Florianópolis",
+      "cidadeB": "Porto Alegre",
+      "espacos": 2,
+      "paralela": 0,
+      "cor": "PM"
+    },
+    {
+      "cidadeA": "Florianópolis",
+      "cidadeB": "Porto Alegre",
+      "espacos": 2,
+      "paralela": 1,
+      "cor": "LI"
+    },
+    {
+      "cidadeA": "Porto Alegre",
+      "cidadeB": "Pelotas",
+      "espacos": 1,
+      "paralela": null,
+      "cor": "PM"
+    },
+    {
+      "cidadeA": "Porto Alegre",
+      "cidadeB": "Foz do Iguaçu",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "PM"
+    },
+    {
+      "cidadeA": "Goiânia",
+      "cidadeB": "Ribeirão Preto",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "MA"
+    },
+    {
+      "cidadeA": "Goiânia",
+      "cidadeB": "Belo Horizonte",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "MA"
+    },
+    {
+      "cidadeA": "Cuiabá",
+      "cidadeB": "Brasília",
+      "espacos": 5,
+      "paralela": null,
+      "cor": "PA"
+    },
+    {
+      "cidadeA": "Maceió",
+      "cidadeB": "Petrolina",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "CA"
+    },
+    {
+      "cidadeA": "Aracaju",
+      "cidadeB": "Petrolina",
+      "espacos": 2,
+      "paralela": null,
+      "cor": "CA"
+    },
+    {
+      "cidadeA": "Natal",
+      "cidadeB": "Petrolina",
+      "espacos": 4,
+      "paralela": null,
+      "cor": "CA"
+    },
+    {
+      "cidadeA": "Rio de Janeiro",
+      "cidadeB": "Ribeirão Preto",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "SE"
+    },
+    {
+      "cidadeA": "Curitiba",
+      "cidadeB": "Porto Alegre",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "PM"
+    },
+    {
+      "cidadeA": "Marabá",
+      "cidadeB": "Brasília",
+      "espacos": 6,
+      "paralela": null,
+      "cor": "GR"
+    },
+    {
+      "cidadeA": "Boa Vista",
+      "cidadeB": "Santarém",
+      "espacos": 5,
+      "paralela": null,
+      "cor": "GR"
+    },
+    {
+      "cidadeA": "Corumbá",
+      "cidadeB": "Foz do Iguaçu",
+      "espacos": 5,
+      "paralela": null,
+      "cor": "PM"
+    },
+    {
+      "cidadeA": "Teresina",
+      "cidadeB": "Barreiras",
+      "espacos": 5,
+      "paralela": null,
+      "cor": "GR"
+    },
+    {
+      "cidadeA": "Macapá",
+      "cidadeB": "Santarém",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "AM"
+    },
+    {
+      "cidadeA": "Pelotas",
+      "cidadeB": "Florianópolis",
+      "espacos": 3,
+      "paralela": null,
+      "cor": "PM"
+    }
+  ],
+  "nomesDasCores": {
+    "AM": "Amazônia",
+    "CE": "Cerrado",
+    "PA": "Pantanal",
+    "CA": "Caatinga",
+    "MA": "Mata Atlântica",
+    "PM": "Pampa",
+    "LI": "Litoral",
+    "SE": "Serra",
+    "GR": "Cinza"
+  }
+}

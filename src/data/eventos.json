@@ -1,0 +1,42 @@
+[
+  {
+    "codigo": "chuva-forte",
+    "nome": "Chuva forte",
+    "descricao": "Rotas de 4 ou mais espaços custam 1 carta a mais."
+  },
+  {
+    "codigo": "greve-de-caminhoneiros",
+    "nome": "Greve de caminhoneiros",
+    "descricao": "Ninguém reivindica rotas de 4 ou mais espaços."
+  },
+  {
+    "codigo": "estrada-liberada",
+    "nome": "Estrada liberada",
+    "descricao": "Rotas de 1 e 2 espaços custam 1 carta a menos (mínimo 1)."
+  },
+  {
+    "codigo": "feriado-prolongado",
+    "nome": "Feriado prolongado",
+    "descricao": "Cada jogador compra até 3 cartas por turno, em vez de 2."
+  },
+  {
+    "codigo": "neblina",
+    "nome": "Neblina",
+    "descricao": "As cartas abertas ficam viradas: só se compra do monte."
+  },
+  {
+    "codigo": "pedagio",
+    "nome": "Pedágio",
+    "descricao": "Toda rota reivindicada exige 1 carta extra, de qualquer cor."
+  },
+  {
+    "codigo": "boleia-amiga",
+    "nome": "Boleia amiga",
+    "descricao": "Cada Estepe conta como 2 cartas da cor escolhida."
+  },
+  {
+    "codigo": "ceu-limpo",
+    "nome": "Céu limpo",
+    "descricao": "Rotas de 5 ou 6 espaços rendem +2 pontos."
+  }
+]
