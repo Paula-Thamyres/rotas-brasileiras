@@ -47,6 +47,7 @@ export function EscolhaDeMissoes({
 }: EscolhaDeMissoesProps) {
   const [escolhidas, setEscolhidas] = useState<ReadonlySet<string>>(new Set())
   const [confirmandoSaida, setConfirmandoSaida] = useState(false)
+  const [vendoOMapa, setVendoOMapa] = useState(false)
   const faltam = oferta.minimoParaManter - escolhidas.size
   const total = oferta.missoes.length
   const rotuloDoBotao =
@@ -62,6 +63,27 @@ export function EscolhaDeMissoes({
 
       return proximas
     })
+  }
+
+  if (vendoOMapa) {
+    return (
+      <div
+        role="region"
+        aria-label="Escolha de missões em pausa"
+        className="fixed inset-x-0 bottom-4 z-10 mx-auto flex w-fit max-w-[calc(100%-2rem)] flex-wrap items-center gap-3 rounded-xl border-2 border-destaque bg-painel px-4 py-3 shadow-xl"
+      >
+        <p className="text-sm">
+          {nomeDoJogador}, olhe o mapa com calma. Suas missões estão guardadas.
+        </p>
+        <button
+          type="button"
+          onClick={() => setVendoOMapa(false)}
+          className="cursor-pointer rounded-lg bg-destaque px-4 py-2 text-sm font-bold text-sobre-destaque"
+        >
+          Voltar para escolher missões
+        </button>
+      </div>
+    )
   }
 
   return (
@@ -81,6 +103,13 @@ export function EscolhaDeMissoes({
         <p className="mt-1 text-sm text-suave">
           Marque pelo menos {oferta.minimoParaManter} para manter.
         </p>
+        <button
+          type="button"
+          onClick={() => setVendoOMapa(true)}
+          className="mt-3 w-full cursor-pointer rounded-lg border border-destaque px-4 py-2 text-sm font-semibold"
+        >
+          Ver o mapa antes de escolher
+        </button>
         <ul className="mt-4 space-y-2">
           {oferta.missoes.map((missao) => (
             <li key={missao.nome}>
