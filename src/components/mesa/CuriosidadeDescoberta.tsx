@@ -1,8 +1,35 @@
 import type { DescobertaDeCuriosidades } from '../../hooks/usePartida'
+import { nomeDoSite } from '../../ui/fontes'
 
 interface CuriosidadeDescobertaProps {
   readonly descoberta: DescobertaDeCuriosidades
   readonly onFechar: () => void
+}
+
+interface FonteDaCuriosidadeProps {
+  readonly endereco: string
+}
+
+function FonteDaCuriosidade({ endereco }: FonteDaCuriosidadeProps) {
+  const site = nomeDoSite(endereco)
+
+  if (site === null) {
+    return <p className="mt-1 text-sm text-suave">Fonte: {endereco}</p>
+  }
+
+  return (
+    <p className="mt-1 text-sm text-suave">
+      Fonte:{' '}
+      <a
+        href={endereco}
+        target="_blank"
+        rel="noreferrer"
+        className="font-semibold text-destaque-texto underline"
+      >
+        {site}
+      </a>
+    </p>
+  )
 }
 
 export function CuriosidadeDescoberta({
@@ -28,14 +55,7 @@ export function CuriosidadeDescoberta({
                 {curiosidade.pontos === 1 ? 'ponto' : 'pontos'}
               </p>
               <p className="mt-1 text-sm">{curiosidade.fato}</p>
-              <a
-                href={curiosidade.fonte}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-1 inline-block text-xs text-destaque-texto hover:underline"
-              >
-                Fonte
-              </a>
+              <FonteDaCuriosidade endereco={curiosidade.fonte} />
             </li>
           ))}
         </ul>
