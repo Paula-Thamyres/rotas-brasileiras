@@ -7,6 +7,10 @@
 Jogo de tabuleiro no navegador, inspirado em Ticket to Ride, com o mapa do Brasil. De 2 a 5 jogadores no mesmo computador, e cada vaga pode ser uma pessoa ou o computador.
 
 <p>
+  <a href="https://paula-thamyres.github.io/rotas-brasileiras/"><img alt="Jogar agora no navegador" src="https://img.shields.io/badge/Jogar_agora-no_navegador-3B6D11?style=for-the-badge"></a>
+</p>
+
+<p>
   <img alt="React" src="https://img.shields.io/badge/React-19-2a1a4a?style=for-the-badge">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-6-534AB7?style=for-the-badge">
   <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind-4-1D9E75?style=for-the-badge">
@@ -132,7 +136,6 @@ As regras ficam separadas da interface, por isso são testadas sem abrir o naveg
 ## Próximos passos
 
 - Ajustes a partir dos testes com outras pessoas
-- Publicar o jogo na internet, para jogar direto pelo navegador
 
 <img src="assets/faixa.svg" alt="" width="100%">
 
