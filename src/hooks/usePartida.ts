@@ -9,6 +9,7 @@ import {
 } from '../engine/partida'
 import type { Curiosidade } from '../types/curiosidades'
 import { MENSAGENS_DE_RECUSA } from '../ui/mensagens'
+import type { CompraDaVez } from '../ui/compras'
 import { caminhoesDaDuracao, type DuracaoDaPartida } from '../ui/duracao'
 import type { ParticipanteDaPartida } from '../ui/participantes'
 
@@ -31,6 +32,7 @@ export interface UsoDaPartida {
   readonly idsDosComputadores: ReadonlySet<string>
   readonly jogadasDosComputadores: readonly string[]
   readonly avisoDaJogadaAberto: boolean
+  readonly compraDaVez: CompraDaVez | null
   readonly iniciar: (
     participantes: readonly ParticipanteDaPartida[],
     duracao: DuracaoDaPartida,
@@ -55,6 +57,7 @@ export function usePartida(): UsoDaPartida {
   const [jogadasDosComputadores, setJogadasDosComputadores] =
     useState<readonly string[]>(SEM_JOGADAS)
   const [avisoDaJogadaAberto, setAvisoDaJogadaAberto] = useState(false)
+  const [compraDaVez, setCompraDaVez] = useState<CompraDaVez | null>(null)
 
   useEffect(() => {
     if (partida === null || partida.encerrada || descoberta !== null) return
@@ -72,6 +75,7 @@ export function usePartida(): UsoDaPartida {
       }
 
       setPartida(jogada.partida)
+      setCompraDaVez(null)
       setAvisoDaJogadaAberto(true)
       setJogadasDosComputadores((atuais) => [
         ...atuais,
@@ -106,6 +110,7 @@ export function usePartida(): UsoDaPartida {
       setDescoberta(null)
       setJogadasDosComputadores(SEM_JOGADAS)
       setAvisoDaJogadaAberto(false)
+      setCompraDaVez(null)
     },
     [],
   )
@@ -122,10 +127,21 @@ export function usePartida(): UsoDaPartida {
         return
       }
 
+      const quemJogou = jogadorDaVez(partida)
+
       setPartida(resultado.partida)
       setAviso(null)
       setJogadasDosComputadores(SEM_JOGADAS)
       setAvisoDaJogadaAberto(false)
+      setCompraDaVez(
+        resultado.cartaPega === undefined
+          ? null
+          : {
+              jogadorId: quemJogou.id,
+              nomeDoJogador: quemJogou.nome,
+              cartaPega: resultado.cartaPega,
+            },
+      )
 
       if (
         resultado.curiosidades !== undefined &&
@@ -154,6 +170,7 @@ export function usePartida(): UsoDaPartida {
     setIdsDosComputadores(SEM_COMPUTADORES)
     setJogadasDosComputadores(SEM_JOGADAS)
     setAvisoDaJogadaAberto(false)
+    setCompraDaVez(null)
   }, [])
 
   return {
@@ -163,6 +180,7 @@ export function usePartida(): UsoDaPartida {
     idsDosComputadores,
     jogadasDosComputadores,
     avisoDaJogadaAberto,
+    compraDaVez,
     iniciar,
     executar,
     dispensarDescoberta,

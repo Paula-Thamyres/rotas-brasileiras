@@ -330,6 +330,37 @@ describe('comprar cartas', () => {
     })
   })
 
+  it('informa a carta pega da mesa e a carta que veio do monte', () => {
+    const partida = comAbertas(novaPartida(), ['AM', 'CE', 'PA', 'CA', 'MA'])
+    const daMesa = comprarCartaAberta(partida, 1)
+    const doMonte = comprarCartaDoMonte(partida)
+
+    expect(daMesa.valida && daMesa.cartaPega).toEqual({
+      carta: 'CE',
+      origem: 'MESA',
+    })
+    expect(doMonte.valida && doMonte.cartaPega).toEqual({
+      carta: partida.baralho.monte[0],
+      origem: 'MONTE',
+    })
+  })
+
+  it('informa a carta pega mesmo quando a compra passa a vez', () => {
+    const partida = comAbertas(novaPartida(), [
+      CARTA_CORINGA,
+      'CE',
+      'PA',
+      'CA',
+      'MA',
+    ])
+    const resultado = comprarCartaAberta(partida, 0)
+
+    expect(resultado.valida && resultado.cartaPega).toEqual({
+      carta: CARTA_CORINGA,
+      origem: 'MESA',
+    })
+  })
+
   it('recusa posição inválida da carta aberta', () => {
     expect(() => comprarCartaAberta(novaPartida(), 9)).toThrow(RangeError)
   })

@@ -11,6 +11,7 @@ function App() {
     idsDosComputadores,
     jogadasDosComputadores,
     avisoDaJogadaAberto,
+    compraDaVez,
     iniciar,
     executar,
     dispensarDescoberta,
@@ -32,6 +33,7 @@ function App() {
           idsDosComputadores={idsDosComputadores}
           jogadasDosComputadores={jogadasDosComputadores}
           avisoDaJogadaAberto={avisoDaJogadaAberto}
+          compraDaVez={compraDaVez}
           onExecutar={executar}
           onDispensarDescoberta={dispensarDescoberta}
           onDispensarAvisoDaJogada={dispensarAvisoDaJogada}

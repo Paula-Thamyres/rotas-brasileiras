@@ -4,6 +4,7 @@ interface FaixaDaVezProps {
   readonly nomeDaVez: string
   readonly vezDoComputador: boolean
   readonly instrucao: string
+  readonly aviso: string | null
   readonly corDoJogador: string
   readonly jogadasDosComputadores: readonly string[]
 }
@@ -12,12 +13,23 @@ export function FaixaDaVez({
   nomeDaVez,
   vezDoComputador,
   instrucao,
+  aviso,
   corDoJogador,
   jogadasDosComputadores,
 }: FaixaDaVezProps) {
   const classes = vezDoComputador
     ? 'border-suave bg-borda'
     : 'border-destaque bg-aviso text-sobre-aviso'
+
+  const avisoDaRecusa =
+    aviso === null ? null : (
+      <p
+        role="alert"
+        className="mt-2 rounded-lg bg-red-950 px-3 py-2 text-sm font-semibold text-red-200"
+      >
+        {aviso}
+      </p>
+    )
 
   return (
     <section
@@ -39,11 +51,13 @@ export function FaixaDaVez({
             </span>
           </p>
           <UltimasJogadas jogadas={jogadasDosComputadores} />
+          {avisoDaRecusa}
         </div>
       ) : (
         <div>
           <p className="text-lg font-bold">Sua vez, {nomeDaVez}!</p>
           <p className="text-sm">{instrucao}</p>
+          {avisoDaRecusa}
           <UltimasJogadas jogadas={jogadasDosComputadores} />
         </div>
       )}

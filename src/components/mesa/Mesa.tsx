@@ -21,6 +21,7 @@ import type {
 import { mapa } from '../../data'
 import type { Rota } from '../../types/mapa'
 import { corDoJogador } from '../../ui/jogadores'
+import { mensagemDaCompra, type CompraDaVez } from '../../ui/compras'
 import { jogadorDoPainel } from '../../ui/participantes'
 import { mensagemDoResultado } from '../../ui/resultado'
 import { avisoDaUltimaRodada } from '../../ui/ultimaRodada'
@@ -47,6 +48,7 @@ interface MesaProps {
   readonly idsDosComputadores: ReadonlySet<string>
   readonly jogadasDosComputadores: readonly string[]
   readonly avisoDaJogadaAberto: boolean
+  readonly compraDaVez: CompraDaVez | null
   readonly onExecutar: (acao: AcaoDaPartida) => void
   readonly onDispensarDescoberta: () => void
   readonly onDispensarAvisoDaJogada: () => void
@@ -70,6 +72,7 @@ export function Mesa({
   idsDosComputadores,
   jogadasDosComputadores,
   avisoDaJogadaAberto,
+  compraDaVez,
   onExecutar,
   onDispensarDescoberta,
   onDispensarAvisoDaJogada,
@@ -111,6 +114,7 @@ export function Mesa({
             partida.cartasCompradasNoTurno,
             cartasPorCompra(evento),
           )}
+          aviso={aviso}
           corDoJogador={corDoJogador(partida.indiceDaVez)}
           jogadasDosComputadores={jogadasDosComputadores}
         />
@@ -166,7 +170,14 @@ export function Mesa({
           <MaoDoJogador mao={dono.mao} />
           <div className="w-60">
             <AcoesDaVez
-              aviso={aviso}
+              compra={
+                compraDaVez === null
+                  ? null
+                  : mensagemDaCompra(
+                      compraDaVez,
+                      compraDaVez.jogadorId === jogador.id,
+                    )
+              }
               onComprarMissoes={() => onExecutar(comprarMissoes)}
             />
           </div>

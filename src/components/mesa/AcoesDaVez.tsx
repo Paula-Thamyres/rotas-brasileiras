@@ -1,17 +1,17 @@
 interface AcoesDaVezProps {
-  readonly aviso: string | null
+  readonly compra: string | null
   readonly onComprarMissoes: () => void
 }
 
-export function AcoesDaVez({ aviso, onComprarMissoes }: AcoesDaVezProps) {
+export function AcoesDaVez({ compra, onComprarMissoes }: AcoesDaVezProps) {
   return (
     <section aria-label="Ações da vez" className="space-y-2">
-      {aviso !== null && (
+      {compra !== null && (
         <p
-          role="alert"
-          className="rounded-lg bg-red-950 p-2 text-sm text-red-200"
+          role="status"
+          className="rounded-lg border border-destaque bg-interno p-2 text-sm font-semibold"
         >
-          {aviso}
+          {compra}
         </p>
       )}
       <p className="text-sm text-suave">

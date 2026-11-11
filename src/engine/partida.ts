@@ -85,11 +85,19 @@ export type MotivoDaRecusaDaAcao =
   | 'MISSOES_A_MENOS_DO_MINIMO'
   | 'CARTAS_ABERTAS_VIRADAS'
 
+export type OrigemDaCartaPega = 'MONTE' | 'MESA'
+
+export interface CartaPega {
+  readonly carta: Carta
+  readonly origem: OrigemDaCartaPega
+}
+
 export type ResultadoDaAcao =
   | {
       readonly valida: true
       readonly partida: Partida
       readonly curiosidades?: readonly Curiosidade[]
+      readonly cartaPega?: CartaPega
     }
   | { readonly valida: false; readonly motivo: MotivoDaRecusaDaAcao }
 
@@ -347,6 +355,7 @@ export function comprarCartaDoMonte(
   return {
     valida: true,
     partida: registrarCompra(partida, baralho, carta, false),
+    cartaPega: { carta, origem: 'MONTE' },
   }
 }
 
@@ -372,6 +381,7 @@ export function comprarCartaAberta(
   return {
     valida: true,
     partida: registrarCompra(partida, baralho, carta, ehCoringa),
+    cartaPega: { carta, origem: 'MESA' },
   }
 }
 
