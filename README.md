@@ -1,59 +1,143 @@
-# Rotas Brasileiras
+<p align="center">
+  <img src="assets/banner.svg" alt="Rotas Brasileiras: mapa do Brasil com as rotas do jogo" width="100%">
+</p>
+
+# rotas-brasileiras
 
 Jogo de tabuleiro no navegador, inspirado em Ticket to Ride, com o mapa do Brasil. De 2 a 5 jogadores no mesmo computador, e cada vaga pode ser uma pessoa ou o computador.
 
-O jogo já funciona do começo ao fim e segue recebendo ajustes.
+<p>
+  <img alt="React" src="https://img.shields.io/badge/React-19-2a1a4a?style=for-the-badge">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-6-534AB7?style=for-the-badge">
+  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind-4-1D9E75?style=for-the-badge">
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-8-EF9F27?style=for-the-badge">
+  <img alt="Vitest" src="https://img.shields.io/badge/Testes-Vitest-D4537E?style=for-the-badge">
+</p>
+
+<p align="center">
+  <img src="assets/mesa.png" alt="Mesa do jogo com o mapa do Brasil, as missões e as cartas" width="100%">
+</p>
+
+<img src="assets/faixa.svg" alt="" width="100%">
+
+## Índice
+
+- [Como funciona](#como-funciona)
+- [O que muda em relação ao jogo original](#o-que-muda-em-relação-ao-jogo-original)
+- [Como rodar](#como-rodar)
+- [Organização do código](#organização-do-código)
+- [Próximos passos](#próximos-passos)
+
+<img src="assets/faixa.svg" alt="" width="100%">
 
 ## Como funciona
 
-Cada jogador começa com 45 caminhões (20 na partida rápida, escolhida na tela inicial) e liga cidades construindo rotas pelo mapa. Antes da primeira jogada, cada um recebe 3 missões e fica com pelo menos 2. Na sua vez, o jogador faz uma destas ações:
+Cada jogador começa com 45 caminhões (20 na partida rápida) e liga cidades construindo rotas pelo mapa. Antes da primeira jogada, cada um recebe 3 missões e fica com pelo menos 2. Na sua vez, o jogador faz uma destas ações:
 
-- comprar cartas;
-- reivindicar uma rota, pagando com cartas da cor dela;
-- comprar missões.
+| Ação | O que acontece |
+| --- | --- |
+| Comprar cartas | Pega 2 cartas, do monte ou das abertas na mesa. O Estepe aberto vale a vez inteira |
+| Reivindicar uma rota | Paga com cartas da cor dela e ganha os pontos do tamanho da rota |
+| Comprar missões | Saem 3 missões e o jogador fica com pelo menos 1 |
 
 As cartas são de 8 regiões (Amazônia, Cerrado, Pantanal, Caatinga, Mata Atlântica, Pampa, Litoral e Serra), mais o Estepe, que vale como coringa.
 
-O botão "Como jogar" abre um tutorial passo a passo, na tela inicial e durante a partida.
+### Pontos por rota
+
+| Espaços | 1 | 2 | 3 | 4 | 5 | 6 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Pontos | 1 | 2 | 4 | 7 | 10 | 15 |
+
+<img src="assets/faixa.svg" alt="" width="100%">
 
 ## O que muda em relação ao jogo original
 
-- **Missões:** ligar as cidades indicadas rende pontos, e quem não consegue perde pontos no fim.
-- **Dia e noite:** a cada amanhecer sai uma carta de evento que muda as regras para todos até o próximo amanhecer. A mesa também muda de cor: lilás de dia e roxo escuro à noite. Na barra do topo, um caminhão passa pela estrada, com sol de dia e lua com faróis acesos à noite.
-- **Curiosidades:** ao ligar uma cidade, o jogador descobre uma curiosidade sobre ela e ganha 1 ponto.
-- **Fim de jogo:** quando alguém termina a vez com 2 caminhões ou menos, todos jogam mais uma rodada, e o topo da tela avisa. O caminho mais longo vale 10 pontos extras. No final, uma tela mostra a classificação com o detalhe dos pontos de cada jogador.
-- **Computador:** a jogada de cada computador aparece numa janela, para dar tempo de entender o que ele fez.
+| Diferencial | Como funciona |
+| --- | --- |
+| Missões | Ligar as cidades indicadas rende pontos, e quem não consegue perde pontos no fim |
+| Dia e noite | A cada amanhecer sai uma carta de evento que muda as regras para todos até o próximo amanhecer. O tema da tela também troca entre noite e dia |
+| Curiosidades | Ao ligar uma cidade, o jogador descobre uma curiosidade sobre ela, com a fonte da informação, e ganha 1 ponto |
+| Fim de jogo | Quando alguém termina a vez com 2 caminhões ou menos, todos jogam mais uma rodada. O caminho mais longo vale 10 pontos extras |
+| Partida rápida | Opção de 20 caminhões por jogador, para jogos mais curtos |
+| Computador | Cada jogada do computador aparece numa janela que explica o que ele fez, e o jogo só segue depois do "Entendi" |
 
-## Tecnologias
+### Eventos do dia
 
-React, TypeScript, Tailwind CSS, Vite e Vitest.
+| Evento | Efeito |
+| --- | --- |
+| Chuva forte | Rotas de 4 ou mais espaços custam 1 carta a mais |
+| Greve de caminhoneiros | Ninguém reivindica rotas de 4 ou mais espaços |
+| Estrada liberada | Rotas de 1 e 2 espaços custam 1 carta a menos (mínimo 1) |
+| Feriado prolongado | Cada jogador compra até 3 cartas por turno, em vez de 2 |
+| Neblina | As cartas abertas ficam viradas: só se compra do monte |
+| Pedágio | Toda rota reivindicada exige 1 carta extra, de qualquer cor |
+| Boleia amiga | Cada Estepe conta como 2 cartas da cor escolhida |
+| Céu limpo | Rotas de 5 ou 6 espaços rendem +2 pontos |
+
+> [!TIP]
+> O botão "Como jogar", na tela inicial e durante a partida, explica o jogo passo a passo, na ordem em que as coisas acontecem.
+
+<img src="assets/faixa.svg" alt="" width="100%">
 
 ## Como rodar
 
 É preciso ter o Node.js instalado.
 
+![1](https://img.shields.io/badge/-1-534AB7?style=flat-square) **Clone o repositório**
+
 ~~~
 git clone https://github.com/Paula-Thamyres/rotas-brasileiras.git
 cd rotas-brasileiras
+~~~
+
+![2](https://img.shields.io/badge/-2-534AB7?style=flat-square) **Instale as dependências**
+
+~~~
 npm install
+~~~
+
+![3](https://img.shields.io/badge/-3-534AB7?style=flat-square) **Abra o jogo**
+
+~~~
 npm run dev
 ~~~
 
-O jogo abre em http://localhost:5173/. Para rodar os testes:
+> [!NOTE]
+> O jogo abre em http://localhost:5173/.
+
+Para rodar os testes e gerar a versão de produção:
 
 ~~~
 npm test
+npm run build
 ~~~
+
+<img src="assets/faixa.svg" alt="" width="100%">
 
 ## Organização do código
 
-- `src/engine`: regras do jogo, em funções puras (baralho, rotas, partida, missões e computador)
-- `src/data`: mapa, missões, eventos e curiosidades em JSON
-- `src/types`: tipos compartilhados
-- `src/hooks`: estado da partida
-- `src/components`: telas e peças do jogo
-- `src/ui`: textos e funções de apoio das telas
+| Pasta | O que tem |
+| --- | --- |
+| `src/engine` | Regras do jogo, em funções puras (baralho, rotas, partida, missões e computador) |
+| `src/data` | Mapa, missões, eventos e curiosidades em JSON |
+| `src/types` | Tipos compartilhados |
+| `src/hooks` | Estado da partida |
+| `src/components` | Telas e peças do jogo |
+| `src/ui` | Textos e funções de apoio das telas |
+
+As regras ficam separadas da interface, por isso são testadas sem abrir o navegador.
+
+<img src="assets/faixa.svg" alt="" width="100%">
 
 ## Próximos passos
 
 - Ajustes a partir dos testes com outras pessoas
+- Publicar o jogo na internet, para jogar direto pelo navegador
+
+<img src="assets/faixa.svg" alt="" width="100%">
+
+<p align="center">
+  <a href="https://github.com/Paula-Thamyres">
+    <img src="assets/rodape.svg" alt="Feito por Paula Femina" width="100%">
+  </a>
+</p>
