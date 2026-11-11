@@ -10,6 +10,8 @@ Jogo de tabuleiro no navegador, inspirado em Ticket to Ride, com o mapa do Brasi
   <a href="https://paula-thamyres.github.io/rotas-brasileiras/"><img alt="Jogar agora no navegador" src="https://img.shields.io/badge/Jogar_agora-no_navegador-3B6D11?style=for-the-badge"></a>
 </p>
 
+O jogo fica publicado no GitHub Pages e é atualizado sozinho a cada push.
+
 <p>
   <img alt="React" src="https://img.shields.io/badge/React-19-2a1a4a?style=for-the-badge">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-6-534AB7?style=for-the-badge">
